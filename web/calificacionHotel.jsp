@@ -37,6 +37,34 @@
             text-shadow: 2px 2px gray, 3px 3px lightgray;
         }
         
+        div.stars {
+        width: 270px;
+        display: inline-block;
+        }
+        input.star { display: none; }
+        label.star {
+        float: right;
+        padding: 10px;
+        font-size: 36px;
+        color: #444;
+        transition: all .2s;
+        }
+        input.star:checked ~ label.star:before {
+        content: '★';
+        color: #FD4;
+        transition: all .25s;
+        }
+        input.star-5:checked ~ label.star:before {
+        color: #FE7;
+        text-shadow: 0 0 20px #952;
+        }
+        input.star-1:checked ~ label.star:before { color: #F62; }
+        label.star:hover { transform: rotate(-15deg) scale(1.3); }
+        label.star:before {
+        content: '☆';
+        font-family: FontAwesome;
+        }
+        
         
         </style>
     </head>
@@ -53,86 +81,96 @@
             <tr>
                 <td>Le prestaron el servicio de manera cordial.</td>
                 <td>
-                    <span class="">
-                      <input id="ratingA5" type="radio" name="rating" value="5">
-                      <label for="ratingA5">5</label>
-                      <input id="ratingA4" type="radio" name="rating" value="4">
-                      <label for="ratingA4">4</label>
-                      <input id="ratingA3" type="radio" name="rating" value="3" checked>
-                      <label for="ratingA3">3</label>
-                      <input id="ratingA2" type="radio" name="rating" value="2">
-                      <label for="ratingA2">2</label>
-                      <input id="ratingA1" type="radio" name="rating" value="1">
-                      <label for="ratingA1">1</label>
-                    </span>
+                    <div class="stars">
+                      <form action="">
+                        <input class="star star-5" id="A-star-5" type="radio" name="star"/>
+                        <label class="star star-5" for="A-star-5"></label>
+                        <input class="star star-4" id="A-star-4" type="radio" name="star"/>
+                        <label class="star star-4" for="A-star-4"></label>
+                        <input class="star star-3" id="A-star-3" type="radio" name="star"/>
+                        <label class="star star-3" for="A-star-3"></label>
+                        <input class="star star-2" id="A-star-2" type="radio" name="star"/>
+                        <label class="star star-2" for="A-star-2"></label>
+                        <input class="star star-1" id="A-star-1" type="radio" name="star"/>
+                        <label class="star star-1" for="A-star-1"></label>
+                      </form>
+                    </div>
                 </td>
             </tr>
             <tr>
                 <td>La presentación y estado de nuestras instalaciones era el adecuado.</td>
                 <td>
-                    <span class="">
-                        <input id="ratingB5" type="radio" name="rating" value="5">
-                        <label for="ratingB5">5</label>
-                        <input id="ratingB4" type="radio" name="rating" value="4">
-                        <label for="ratingB4">4</label>
-                        <input id="ratingB3" type="radio" name="rating" value="3" checked>
-                        <label for="ratingB3">3</label>
-                        <input id="ratingB2" type="radio" name="rating" value="2">
-                        <label for="ratingB2">2</label>
-                        <input id="ratingB1" type="radio" name="rating" value="1">
-                        <label for="ratingB1">1</label>
-                    </span>
+                    <div class="stars">
+                      <form action="">
+                        <input class="star star-5" id="B-star-5" type="radio" name="star"/>
+                        <label class="star star-5" for="B-star-5"></label>
+                        <input class="star star-4" id="B-star-4" type="radio" name="star"/>
+                        <label class="star star-4" for="B-star-4"></label>
+                        <input class="star star-3" id="B-star-3" type="radio" name="star"/>
+                        <label class="star star-3" for="B-star-3"></label>
+                        <input class="star star-2" id="B-star-2" type="radio" name="star"/>
+                        <label class="star star-2" for="B-star-2"></label>
+                        <input class="star star-1" id="B-star-1" type="radio" name="star"/>
+                        <label class="star star-1" for="B-star-1"></label>
+                      </form>
+                    </div>
                 </td>
             </tr>
             <tr>
                 <td>El servicio fué rápido y eficaz.</td>
                 <td>
-                    <span class="">
-                        <input id="ratingC5" type="radio" name="rating" value="5">
-                        <label for="ratingC5">5</label>
-                        <input id="ratingC4" type="radio" name="rating" value="4">
-                        <label for="ratingC4">4</label>
-                        <input id="ratingC3" type="radio" name="rating" value="3" checked>
-                        <label for="ratingC3">3</label>
-                        <input id="ratingC2" type="radio" name="rating" value="2">
-                        <label for="ratingC2">2</label>
-                        <input id="ratingC1" type="radio" name="rating" value="1">
-                        <label for="ratingC1">1</label>
-                    </span>
+                    <div class="stars">
+                      <form action="">
+                        <input class="star star-5" id="C-star-5" type="radio" name="star"/>
+                        <label class="star star-5" for="C-star-5"></label>
+                        <input class="star star-4" id="C-star-4" type="radio" name="star"/>
+                        <label class="star star-4" for="C-star-4"></label>
+                        <input class="star star-3" id="C-star-3" type="radio" name="star"/>
+                        <label class="star star-3" for="C-star-3"></label>
+                        <input class="star star-2" id="C-star-2" type="radio" name="star"/>
+                        <label class="star star-2" for="C-star-2"></label>
+                        <input class="star star-1" id="C-star-1" type="radio" name="star"/>
+                        <label class="star star-1" for="C-star-1"></label>
+                      </form>
+                    </div>
                 </td>
             </tr>
             <tr>
                 <td>Los precios son los adecuados.</td>
                 <td>
-                    <span class="">
-                        <input id="ratingD5" type="radio" name="rating" value="5">
-                        <label for="ratingD5">5</label>
-                        <input id="ratingD4" type="radio" name="rating" value="4">
-                        <label for="ratingD4">4</label>
-                        <input id="ratingD3" type="radio" name="rating" value="3" checked>
-                        <label for="ratingD3">3</label>
-                        <input id="ratingD2" type="radio" name="rating" value="2">
-                        <label for="ratingD2">2</label>
-                        <input id="ratingD1" type="radio" name="rating" value="1">
-                        <label for="ratingD1">1</label>
-                    </span>
+                    <div class="stars">
+                      <form action="">
+                        <input class="star star-5" id="D-star-5" type="radio" name="star"/>
+                        <label class="star star-5" for="D-star-5"></label>
+                        <input class="star star-4" id="D-star-4" type="radio" name="star"/>
+                        <label class="star star-4" for="D-star-4"></label>
+                        <input class="star star-3" id="D-star-3" type="radio" name="star"/>
+                        <label class="star star-3" for="D-star-3"></label>
+                        <input class="star star-2" id="D-star-2" type="radio" name="star"/>
+                        <label class="star star-2" for="D-star-2"></label>
+                        <input class="star star-1" id="D-star-1" type="radio" name="star"/>
+                        <label class="star star-1" for="D-star-1"></label>
+                      </form>
+                    </div>
                 </td>
             </tr>
             <tr>
                 <td>Encontró con facilidad y en estado limpio y agradable los restaurantes, baños y demas instalaciones dentro de nuestro hotel.</td>
                 <td>
-                    <span class="">
-                        <input id="ratingE5" type="radio" name="rating" value="5">
-                        <label for="ratingE5">5</label>
-                        <input id="ratingE4" type="radio" name="rating" value="4">
-                        <label for="ratingE4">4</label>
-                        <input id="ratingE3" type="radio" name="rating" value="3" checked>
-                        <label for="ratingE3">3</label>
-                        <input id="ratingE2" type="radio" name="rating" value="2">
-                        <label for="ratingE2">2</label>
-                        <input id="ratingE1" type="radio" name="rating" value="1">
-                        <label for="ratingE1">1</label>
-                    </span>
+                    <div class="stars">
+                      <form action="">
+                        <input class="star star-5" id="E-star-5" type="radio" name="star"/>
+                        <label class="star star-5" for="E-star-5"></label>
+                        <input class="star star-4" id="E-star-4" type="radio" name="star"/>
+                        <label class="star star-4" for="E-star-4"></label>
+                        <input class="star star-3" id="E-star-3" type="radio" name="star"/>
+                        <label class="star star-3" for="E-star-3"></label>
+                        <input class="star star-2" id="E-star-2" type="radio" name="star"/>
+                        <label class="star star-2" for="E-star-2"></label>
+                        <input class="star star-1" id="E-star-1" type="radio" name="star"/>
+                        <label class="star star-1" for="E-star-1"></label>
+                      </form>
+                    </div>
                 </td>
             </tr>        
             
