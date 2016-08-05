@@ -67,7 +67,9 @@
               <input type="submit" value="Notificacion de eventos"> 
         </form>
          
-            
+        <form action="/Semestre2_2016_Small_Programmers/CalificacionServlet">
+              <input type="submit" value="Calificación del servicio"> 
+        </form>
         
     </body>
 </html>
