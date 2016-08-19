@@ -78,16 +78,16 @@
                     <div class="precio">$ 9,999</div>
                     <div class="compra"><a href="carrito.jsp">Reserva</a></div>
                 </div>
-                <form action="/ApplicationWeb/ServiciosControlador">
+                <form action="ServiciosControlador">
                     <input type="submit" value="Consultar los servicios"> 
                 </form>
-                <form action="/ApplicationWeb/CalificacionControlador">
+                <form action="CalificacionControlador">
                       <input type="submit" value="Calificación del servicio"> 
                 </form>
-                <form action="/ApplicationWeb/NotificacionesControlador">
+                <form action="NotificacionesControlador">
                     <input type="submit" value="Notificacion de eventos"> 
                 </form>
-                <form action="/ApplicationWeb/IngresarNotificacionesControlador">
+                <form action="IngresarNotificacionesControlador">
                     Fecha:<br>
                     <input type="text" name="fechaIngresada">
                     <br>
