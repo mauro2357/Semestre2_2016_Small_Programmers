@@ -49,7 +49,7 @@
             </div>
         </header> 
         <section>
-            <section>
+            <div class="centro">
                 <img id="banner" class="imagen" src="img/mujer.jpg" width="960" height="300" />    
                 <div class="contenido02">
                     <div class="list_carousel">
@@ -120,6 +120,7 @@
                         <div class="compra"><a href="carrito.jsp">Reserva</a></div>
                     </div>
                 </div>
+            </div>
         </section>
             <%@include file="footer.jsp" %>
     </body>
