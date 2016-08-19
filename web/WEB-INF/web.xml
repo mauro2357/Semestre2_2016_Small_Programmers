@@ -40,6 +40,18 @@
         <servlet-name>IngresarNotificacionesControlador</servlet-name>
         <servlet-class>controlador.IngresarNotificacionesControlador</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AdministradorControlador</servlet-name>
+        <servlet-class>controlador.AdministradorControlador</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdministradorRepositorio</servlet-name>
+        <servlet-class>Repositorios.AdministradorRepositorio</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FacadeAdministrador</servlet-name>
+        <servlet-class>Repositorios.FacadeAdministrador</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Registro1</servlet-name>
         <url-pattern>/Registro1</url-pattern>
@@ -79,6 +91,18 @@
     <servlet-mapping>
         <servlet-name>IngresarNotificacionesControlador</servlet-name>
         <url-pattern>/IngresarNotificacionesControlador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdministradorControlador</servlet-name>
+        <url-pattern>/AdministradorControlador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdministradorRepositorio</servlet-name>
+        <url-pattern>/AdministradorRepositorio</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FacadeAdministrador</servlet-name>
+        <url-pattern>/FacadeAdministrador</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -68,7 +68,7 @@ public class Conexion {
                 "  apellido varchar(45) DEFAULT NULL," +
                 "  email varchar(45) DEFAULT NULL," +
                 "  contrasena varchar(45) DEFAULT NULL," +
-                "  idusuarios int NOT NULL AUTO_INCREMENT," +
+                "  idusuarios varchar(45) DEFAULT NULL," +
                 "  telefono varchar(45) DEFAULT NULL," +
                 "  PRIMARY KEY (idusuarios)" +
                 ");";
@@ -81,6 +81,17 @@ public class Conexion {
                 "  fechaEntrada varchar(45) DEFAULT NULL," +
                 "  fechaSalida varchar(45) DEFAULT NULL," +
                 "  PRIMARY KEY (idreservas)" +
+                ");";
+            
+            //Crea la tabla de Administrador
+            String sqlAdministrador=  "CREATE TABLE IF NOT EXISTS administrador (" +
+                "  nombre varchar(45) DEFAULT NULL," +
+                "  apellido varchar(45) DEFAULT NULL," +
+                "  email varchar(45) DEFAULT NULL," +
+                "  contrasena varchar(45) DEFAULT NULL," +
+                "  idusuarios varchar(45) DEFAULT NULL," +
+                "  telefono varchar(45) DEFAULT NULL," +
+                "  PRIMARY KEY (idusuarios)" +
                 ");";
 
             

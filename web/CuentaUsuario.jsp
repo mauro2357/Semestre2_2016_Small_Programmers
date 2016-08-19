@@ -78,15 +78,6 @@
                             <input type="submit" value="Reservar habitacion"> 
                         </form>
                     </div>
-                    <form action="/Semestre2_2016_Small_Programmers-master/IngresarNotificacionesControlador">
-                        Fecha:<br>
-                        <input type="text" name="fechaIngresada">
-                        <br>
-                        Descripcion:<br>
-                        <input type="text" name="descripcionIngresada">
-                        <br><br>
-                        <input type="submit" value="Ingresar nueva notificación (solo administrador)"> 
-                    </form>
                 </div>
             </div>
         </section>
