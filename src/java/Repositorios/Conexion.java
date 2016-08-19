@@ -68,7 +68,7 @@ public class Conexion {
                 "  apellido varchar(45) DEFAULT NULL," +
                 "  email varchar(45) DEFAULT NULL," +
                 "  contrasena varchar(45) DEFAULT NULL," +
-                "  idusuarios varchar(45) DEFAULT NULL," +
+                "  idusuarios varchar(45) NOT NULL," +
                 "  telefono varchar(45) DEFAULT NULL," +
                 "  PRIMARY KEY (idusuarios)" +
                 ");";
@@ -89,9 +89,9 @@ public class Conexion {
                 "  apellido varchar(45) DEFAULT NULL," +
                 "  email varchar(45) DEFAULT NULL," +
                 "  contrasena varchar(45) DEFAULT NULL," +
-                "  idusuarios varchar(45) DEFAULT NULL," +
+                "  idadministrador varchar(45) NOT NULL," +
                 "  telefono varchar(45) DEFAULT NULL," +
-                "  PRIMARY KEY (idusuarios)" +
+                "  PRIMARY KEY (idadministrador)" +
                 ");";
 
             
@@ -100,6 +100,7 @@ public class Conexion {
             st.executeUpdate(sqlNotificaciones);
             st.executeUpdate(sqlUsuarios);
             st.executeUpdate(sqlReservas);
+            st.executeUpdate(sqlAdministrador);
 
         }
         catch(Exception e)

@@ -39,21 +39,21 @@
                     <div class="producto">
                         <div class="foto"><img src="img/consulta.png" width="150" height="200" alt="producto01" /></div>
                         <div class="descripcionA">Consultas</div>
-                        <form action="/Semestre2_2016_Small_Programmers-master/ServiciosControlador">
+                        <form action="/Semestre2_2016_Small_Programmers/ServiciosControlador">
                             <input type="submit" value="Consultar los servicios"> 
                         </form>
                     </div>
                     <div class="producto">
                         <div class="foto"><img src="img/calificar.png" width="150" height="200" alt="producto 01" /></div>
                         <div class="descripcionA">Calificaciones</div>
-                        <form action="/Semestre2_2016_Small_Programmers-master/CalificacionControlador">
+                        <form action="/Semestre2_2016_Small_Programmers/CalificacionControlador">
                             <input type="submit" value="Calificación del servicio"> 
                         </form>
                     </div>
                     <div class="producto">
                         <div class="foto"><img src="img/eventos.png" width="150" height="200" alt="producto 01" /></div>
                         <div class="descripcionA">Eventos</div>
-                        <form action="/Semestre2_2016_Small_Programmers-master/NotificacionesControlador">
+                        <form action="/Semestre2_2016_Small_Programmers/NotificacionesControlador">
                             <input type="submit" value="Notificacion de eventos"> 
                         </form>
                     </div>
