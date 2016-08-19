@@ -1,64 +1,52 @@
+
+<%@page import="DTO.NotificacionDTO"%>
 <%-- 
-    Document   : consultaNotificaciones
-    Created on : 5/08/2016, 12:20:13 AM
-    Author     : julianbautista87
+    Document   : consultaServicios
+    Created on : 29/07/2016, 08:00:34 PM
+    Author     : Administrator
 --%>
 
+<%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Collection"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="servicios.Notificacion"%>
+<%@page import="DTO.ServicioDTO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Notificaciones</title>
-        <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        th, td, h1 {
-            text-align: center;
-            padding: 8px;
-        }
-        
-        th {
-            background-color: lightgreen;
-            color: white;
-        }
-        
-        h1 {
-            color: lightgreen;
-            font-weight: normal;
-            font-family: Verdana, sans-serif;   
-            font-size: 42px;
-            text-shadow: 2px 2px gray, 3px 3px lightgray;
-        }
-
-        tr:nth-child(even){background-color: lightgray}
-
-        
-        </style>
+        <meta charset="utf-8">
+        <title>Login</title>
+        <link rel="stylesheet" href="Css/Style.css" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="Css/login.css"/>
+        <link rel="stylesheet" type="text/css" href="Css/notificacionStyle.css"/>
     </head>
     <body>
-        <h1>ULTIMOS EVENTOS</h1>
-        <table>
-            <tr>
-                <th>Fecha del evento</th>
-                <th>Descripción del evento</th>
-            </tr>
-        <%
-            Object objServicios=request.getAttribute("notificaciones");
-            Collection<Notificacion> notificaciones=(ArrayList<Notificacion>)objServicios;
-            for(Notificacion notificacion:notificaciones){  %>              
-            <tr>
-                <td><%out.println(notificacion.getFecha());%> </td>
-                <td><%out.println(notificacion.getDescripcion());%></td>
-            </tr>        
-           <% }  %>                 
-        </table>
+        <%@ include file="header.jsp"%>
+        <section>
+                <article>
+                <div id="lo-titulo"><h1>ULTIMOS EVENTOS</h1></div>
+                <div id="lo-forma">
+                    <table>
+                        <tr>
+                            <th>Fecha del evento</th>
+                            <th>Descripción del evento</th>
+                        </tr>
+                    <%
+                        Object objServicios=request.getAttribute("notificaciones");
+                        Collection<NotificacionDTO> notificaciones=(ArrayList<NotificacionDTO>)objServicios;
+                        for(NotificacionDTO notificacion:notificaciones){  %>              
+                        <tr>
+                            <td><%out.println(notificacion.getFecha());%> </td>
+                            <td><%out.println(notificacion.getDescripcion());%></td>
+                        </tr>        
+                       <% }  %>                 
+                    </table>
+                </div>
+                <div id="lo-aviso"><p></p>
+                <p>Lee nuestro 
+                <a href="aviso.jsp"  class="enalceRojo"> Aviso de Privacidad</a></div>
+          </article>
+        </section>
+        <%@ include file="footer.jsp" %> 
     </body>
 </html>

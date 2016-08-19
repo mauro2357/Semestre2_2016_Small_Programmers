@@ -1,20 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
-        <servlet-name>ClientesServlet</servlet-name>
-        <servlet-class>clientes.ClientesServlet</servlet-class>
+        <servlet-name>Registro1</servlet-name>
+        <servlet-class>controlador.Registro1</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>ServiciosServlet</servlet-name>
-        <servlet-class>servicios.ServiciosServlet</servlet-class>
+        <servlet-name>Reserva</servlet-name>
+        <servlet-class>DTO.Reserva</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Reservar</servlet-name>
+        <servlet-class>controlador.Reservar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReservarRepositorio</servlet-name>
+        <servlet-class>Repositorios.ReservarRepositorio</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SeccionControlador</servlet-name>
+        <servlet-class>controlador.SeccionControlador</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginReservar</servlet-name>
+        <servlet-class>controlador.LoginReservar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServiciosControlador</servlet-name>
+        <servlet-class>controlador.ServiciosControlador</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CalificacionControlador</servlet-name>
+        <servlet-class>controlador.CalificacionControlador</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>NotificacionesControlador</servlet-name>
+        <servlet-class>controlador.NotificacionesControlador</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>IngresarNotificacionesControlador</servlet-name>
+        <servlet-class>controlador.IngresarNotificacionesControlador</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ClientesServlet</servlet-name>
-        <url-pattern>/ClientesServlet</url-pattern>
+        <servlet-name>Registro1</servlet-name>
+        <url-pattern>/Registro1</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ServiciosServlet</servlet-name>
-        <url-pattern>/ServiciosServlet</url-pattern>
+        <servlet-name>Reserva</servlet-name>
+        <url-pattern>/Reserva</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Reservar</servlet-name>
+        <url-pattern>/Reservar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReservarRepositorio</servlet-name>
+        <url-pattern>/ReservarRepositorio</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SeccionControlador</servlet-name>
+        <url-pattern>/SeccionControlador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginReservar</servlet-name>
+        <url-pattern>/LoginReservar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServiciosControlador</servlet-name>
+        <url-pattern>/ServiciosControlador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CalificacionControlador</servlet-name>
+        <url-pattern>/CalificacionControlador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NotificacionesControlador</servlet-name>
+        <url-pattern>/NotificacionesControlador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IngresarNotificacionesControlador</servlet-name>
+        <url-pattern>/IngresarNotificacionesControlador</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
