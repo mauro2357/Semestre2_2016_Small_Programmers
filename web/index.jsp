@@ -30,7 +30,6 @@
                                 <li><div class="Brand"><img src="img/brand14.png" width="60" height="60" alt="Brand" /></div></li>
                                 <li><div class="Brand"><img src="img/brand15.png" width="60" height="60" alt="Brand" /></div></li>
                                 <li><div class="Brand"><img src="img/brand16.png" width="60" height="60" alt="Brand" /></div></li>
-                                <li><div class="Brand"><img src="img/brand17.png" width="60" height="60" alt="Brand" /></div></li>
                             </ul>
                             <div class="clearfix"></div>
                     </div>
@@ -79,26 +78,8 @@
                         <div class="precio">$ 9,999</div>
                         <div class="compra"><a href="carrito.jsp">Reserva</a></div>
                     </div>
-                    <form action="ServiciosControlador">
-                        <input type="submit" value="Consultar los servicios"> 
-                    </form>
-                    <form action="CalificacionControlador">
-                          <input type="submit" value="Calificación del servicio"> 
-                    </form>
-                    <form action="NotificacionesControlador">
-                        <input type="submit" value="Notificacion de eventos"> 
-                    </form>
-                    <form action="IngresarNotificacionesControlador">
-                        Fecha:<br>
-                        <input type="text" name="fechaIngresada">
-                        <br>
-                        Descripcion:<br>
-                        <input type="text" name="descripcionIngresada">
-                        <br><br>
-                        <input type="submit" value="Ingresar nueva notificación (solo administrador)"> 
-                    </form>
                 </div>
-            </div>
+            </div>    
         </section>
         <%@ include file ="footer.jsp" %> 
     </body>

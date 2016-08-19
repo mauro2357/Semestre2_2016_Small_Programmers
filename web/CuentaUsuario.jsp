@@ -7,47 +7,7 @@
         <title>Cuenta de Ususario</title>
     </head>
     <body>
-        <header>
-          <div class="encabezado">
-                <div class="encabezado01">
-                    <ul class="menu01" >
-                        <li><a href="#">Call Center</a></li>
-                        <li><a href="index.jsp">LogOut</a></li>
-                        <li><a href="contacto.jsp">Contacto</a></li>
-                        <li><a href="CuentaUsuario.jsp">Home</a></li>
-                    </ul>
-                </div>
-                <div class="encabezado02">
-                    <div class="companias">
-                        <img class="imagen" src="img/compania01.png" width="183" height="30" alt="compania 1" />
-                        <img class="imagen" src="img/compania02.png" width="72" height="30" alt="compania 2" />
-                        <a class="texto">OFERTAS ESPECIALES</a>
-                    </div>  
-                    <div class="bolsa">
-                        <div class="titulo">Compras</div>
-                        <div class="imagen">
-                            <div class="numero">0</div>
-                            <div class="texto">Finalizar Compra</div>
-                       </div>
-                    </div>
-                    <div class="telefonica"></div> 
-                </div>
-            <div class="encabezado03">
-                    <div class="Menu">
-                        <ul class="Menu" >
-                            <li><a href="#">Grupo #1</a></li>
-                            <li><a href="#">Grupo #2</a></li>
-                            <li><a href="#">Grupo #3</a></li>
-                            <li><a href="#">Grupo #4</a></li>
-                        </ul>
-                    </div>
-                    <div class="Search">
-                        <div class="texto">Buscar...</div>
-                        <div class="Button"><a HREF="#"></a></div>
-                    </div>
-              </div>
-            </div>
-        </header> 
+        <%@include file="headerUsuario.jsp" %>
         <section>
             <div class="centro">
                 <img id="banner" class="imagen" src="img/mujer.jpg" width="960" height="300" />    
@@ -70,7 +30,6 @@
                                 <li><div class="Brand"><img src="img/brand14.png" width="60" height="60" alt="Brand" /></div></li>
                                 <li><div class="Brand"><img src="img/brand15.png" width="60" height="60" alt="Brand" /></div></li>
                                 <li><div class="Brand"><img src="img/brand16.png" width="60" height="60" alt="Brand" /></div></li>
-                                <li><div class="Brand"><img src="img/brand17.png" width="60" height="60" alt="Brand" /></div></li>
                             </ul>
                             <div class="clearfix"></div>
                     </div>
@@ -78,50 +37,59 @@
                 <div class="clearout"></div>
                 <div class="contenido03">
                     <div class="producto">
-                        <div class="foto"><img src="img/producto.png" width="150" height="200" alt="producto01" /></div>
-                        <div class="descripcionA"><a href="producto.jsp">Producto 1</a></div>
-                        <div class="descripcionB">Descripción producto</div>
-                        <div class="precio">$ 9,999</div>
-                        <div class="compra"><a href="carrito.jsp">Reserva</a></div>
+                        <div class="foto"><img src="img/consulta.png" width="150" height="200" alt="producto01" /></div>
+                        <div class="descripcionA">Consultas</div>
+                        <form action="/Semestre2_2016_Small_Programmers-master/ServiciosControlador">
+                            <input type="submit" value="Consultar los servicios"> 
+                        </form>
+                    </div>
+                    <div class="producto">
+                        <div class="foto"><img src="img/calificar.png" width="150" height="200" alt="producto 01" /></div>
+                        <div class="descripcionA">Calificaciones</div>
+                        <form action="/Semestre2_2016_Small_Programmers-master/CalificacionControlador">
+                            <input type="submit" value="Calificación del servicio"> 
+                        </form>
+                    </div>
+                    <div class="producto">
+                        <div class="foto"><img src="img/eventos.png" width="150" height="200" alt="producto 01" /></div>
+                        <div class="descripcionA">Eventos</div>
+                        <form action="/Semestre2_2016_Small_Programmers-master/NotificacionesControlador">
+                            <input type="submit" value="Notificacion de eventos"> 
+                        </form>
+                    </div>
+                    <div class="producto">
+                        <div class="foto"><img src="img/reservar.png" width="150" height="200" alt="producto 01" /></div>
+                        <div class="descripcionA">Reservas</div>
+                        <form action="reservas.jsp">
+                            <input type="submit" value="Reservar habitacion"> 
+                        </form>
                     </div>
                     <div class="producto">
                         <div class="foto"><img src="img/producto.png" width="150" height="200" alt="producto 01" /></div>
-                        <div class="descripcionA"><a href="producto.jsp">Producto 1</a></div>
-                        <div class="descripcionB">Descripción producto</div>
-                        <div class="precio">$ 9,999</div>
-                        <div class="compra"><a href="carrito.jsp">Reserva</a></div>
+                        <div class="descripcionA">Reservas</div>
+                        <form action="reservas.jsp">
+                            <input type="submit" value="Reservar habitacion"> 
+                        </form>
                     </div>
                     <div class="producto">
                         <div class="foto"><img src="img/producto.png" width="150" height="200" alt="producto 01" /></div>
-                        <div class="descripcionA"><a href="producto.jsp">Producto 1</a></div>
-                        <div class="descripcionB">Descripción producto</div>
-                        <div class="precio">$ 9,999</div>
-                        <div class="compra"><a href="carrito.jsp">Reserva</a></div>
+                        <div class="descripcionA">Reservas</div>
+                        <form action="reservas.jsp">
+                            <input type="submit" value="Reservar habitacion"> 
+                        </form>
                     </div>
-                    <div class="producto">
-                        <div class="foto"><img src="img/producto.png" width="150" height="200" alt="producto 01" /></div>
-                        <div class="descripcionA"><a href="producto.jsp">Producto 1</a></div>
-                        <div class="descripcionB">Descripción producto</div>
-                        <div class="precio">$ 9,999</div>
-                        <div class="compra"><a href="carrito.jsp">Reserva</a></div>
-                    </div>
-                    <div class="producto">
-                        <div class="foto"><img src="img/producto.png" width="150" height="200" alt="producto 01" /></div>
-                        <div class="descripcionA"><a href="producto.jsp">Producto 1</a></div>
-                        <div class="descripcionB">Descripción producto</div>
-                        <div class="precio">$ 9,999</div>
-                        <div class="compra"><a href="carrito.jsp">Reserva</a></div>
-                    </div>
-                    <div class="producto">
-                        <div class="foto"><img src="img/producto.png" width="150" height="200" alt="producto 01" /></div>
-                        <div class="descripcionA"><a href="producto.jsp">Producto 1</a></div>
-                        <div class="descripcionB">Descripción producto</div>
-                        <div class="precio">$ 9,999</div>
-                        <div class="compra"><a href="carrito.jsp">Reserva</a></div>
-                    </div>
+                    <form action="/Semestre2_2016_Small_Programmers-master/IngresarNotificacionesControlador">
+                        Fecha:<br>
+                        <input type="text" name="fechaIngresada">
+                        <br>
+                        Descripcion:<br>
+                        <input type="text" name="descripcionIngresada">
+                        <br><br>
+                        <input type="submit" value="Ingresar nueva notificación (solo administrador)"> 
+                    </form>
                 </div>
             </div>
         </section>
-            <%@include file="footer.jsp" %>
+        <%@include file="footer.jsp" %>
     </body>
 </html>

@@ -29,7 +29,7 @@
                       <tr>
                         <td>Apellido Primero</td>
                         <td class="rojo">*</td>
-                        <td><input type="text" name="apellidoPaterno" id="apellidoPaterno" required placeholder="Apellido paterno"
+                        <td><input type="text" name="apellidoPaterno" id="apellidoPaterno" required placeholder="Apellido Primero"
                                    /></td>
                         <td>Cuenta de correo</td>
                         <td class="rojo">*</td>
@@ -39,7 +39,7 @@
                       <tr>
                         <td>Apellido Segundo:</td>
                         <td class="rojo">&nbsp;</td>
-                        <td><input type="text" name="apellidoMaterno" id="apellidoMaterno" placeholder="Apellido Materno"
+                        <td><input type="text" name="apellidoMaterno" id="apellidoMaterno" placeholder="Apellido Segundo"
                                    /></td>
                         <td>Confirma cuenta de correo:</td>
                         <td class="rojo">*</td>

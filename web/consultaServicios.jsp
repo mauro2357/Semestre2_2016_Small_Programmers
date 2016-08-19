@@ -1,9 +1,3 @@
-<%-- 
-    Document   : consultaServicios
-    Created on : 29/07/2016, 08:00:34 PM
-    Author     : Administrator
---%>
-
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Collection"%>
 <%@page import="DTO.ServicioDTO"%>
@@ -19,7 +13,7 @@
         <link rel="stylesheet" type="text/css" href="Css/servicioStyle.css"/>
     </head>
     <body>
-        <%@ include file="header.jsp"%>
+        <%@include file="headerUsuario.jsp" %>
         <section>
                 <article>
                 <div id="lo-titulo"><h1>LISTADO DE SERVICIOS</h1></div>

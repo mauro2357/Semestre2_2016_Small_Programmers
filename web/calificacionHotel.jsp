@@ -19,7 +19,7 @@
         <link rel="stylesheet" type="text/css" href="Css/calificacionStyle.css"  />
     </head>
     <body>
-        <%@ include file="header.jsp"%>
+        <%@include file="headerUsuario.jsp" %>
         <section>
                 <article>
                 <div id="lo-titulo"><h1>Por favor califique cada uno de los servicios y características que nuestro hotel le brindó</h1></div>

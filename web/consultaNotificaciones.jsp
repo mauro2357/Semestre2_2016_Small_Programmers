@@ -1,17 +1,12 @@
 
 <%@page import="DTO.NotificacionDTO"%>
-<%-- 
-    Document   : consultaServicios
-    Created on : 29/07/2016, 08:00:34 PM
-    Author     : Administrator
---%>
+
 
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Collection"%>
 <%@page import="DTO.ServicioDTO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="utf-8">
@@ -21,7 +16,7 @@
         <link rel="stylesheet" type="text/css" href="Css/notificacionStyle.css"/>
     </head>
     <body>
-        <%@ include file="header.jsp"%>
+        <%@include file="headerUsuario.jsp" %>
         <section>
                 <article>
                 <div id="lo-titulo"><h1>ULTIMOS EVENTOS</h1></div>
