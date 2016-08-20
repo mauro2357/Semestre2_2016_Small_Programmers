@@ -19,9 +19,9 @@
                 <form id="ru-formulario" action="Reservar" method="post">
                     <table width="100%" border="0">
                         <tr>
-                            <td>Numero de reserva:</td>
+                            <td>identificacion:</td>
                             <td></td>
-                            <td><input type="text" name="codigo" id="codigo" required placeholder="Nro de reserva"/></td>
+                            <td><input type="text" name="codigo" id="codigo" required placeholder="Identificacion"/></td>
                             <td>Nro de camas</td>
                             <td class="rojo">*</td>
                             <td><input type="text" name="camas" id="camas" min="1" max="5" required placeholder="Cantidad de camas"/></td>

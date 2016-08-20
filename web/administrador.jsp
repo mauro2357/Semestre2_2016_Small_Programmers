@@ -9,7 +9,7 @@
         <%@include file="headerUsuario.jsp" %>
         <section>
             <div class="centro">
-                <form action="/Semestre2_2016_Small_Programmers-master/IngresarNotificacionesControlador">
+                <form action="/Semestre2_2016_Small_Programmers/IngresarNotificacionesControlador">
                     Fecha:<br>
                         <input type="text" name="fechaIngresada" />
                         <br>

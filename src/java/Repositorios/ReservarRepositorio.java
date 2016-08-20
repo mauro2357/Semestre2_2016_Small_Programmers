@@ -14,7 +14,7 @@ public class ReservarRepositorio {
         Conexion conexion = new Conexion();
         Connection con = conexion.ObtenerConexion();
         Statement st;
-        String sql = "INSERT INTO reservas values ("+rev.getCodigo()+",'"+rev.getCamas()+"','"+rev.getFechaEntrada()+"','"+rev.getFechaSalida()+"')";
+        String sql = "INSERT INTO reservas (idreservas, codigo, camas, fechaEntrada, fechaSalida) values (null,'"+rev.getCodigo()+"','"+rev.getCamas()+"','"+rev.getFechaEntrada()+"','"+rev.getFechaSalida()+"')";
         try{
             st=con.createStatement();
             st.executeUpdate(sql);
