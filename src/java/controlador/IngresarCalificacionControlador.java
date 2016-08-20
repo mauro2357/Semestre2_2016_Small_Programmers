@@ -6,6 +6,7 @@
 package controlador;
 
 import Repositorios.CalificacionRepositorio;
+import entidadesdominio.Calificacion;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -38,30 +39,29 @@ public class IngresarCalificacionControlador extends HttpServlet {
         int item4 =  Integer.parseInt(request.getParameter("Item4"));
         int item5 =  Integer.parseInt(request.getParameter("Item5"));
         String comentarios = request.getParameter("Comentarios");
-        
-        try{
-        CalificacionRepositorio califRep = new CalificacionRepositorio();
-        califRep.IngresarCalificacion(0, item1, item2, item3, item4, item5, comentarios);
-        }
-        catch(Exception ex){}
-        
-        if((item1+item2+item3+item4+item5) < 15)
-        {
-            try (PrintWriter out = response.getWriter()) {
-                /* TODO output your page here. You may use following sample code. */
-                out.println("<!DOCTYPE html>");
-                out.println("<html>");
-                out.println("<head>");
-                out.println("<title>Calificacion</title>");            
-                out.println("</head>");
-                out.println("<body>");
-                out.println("<h1>Ofrecemos disculpas por no haber estado a la altura de sus exigencias, un descuento del 20% se cargará a su cuenta</h1>");
-                out.println("</body>");
-                out.println("</html>");
-            }
+        Calificacion calificacion=new Calificacion();
+        calificacion.setCalificacionItem1(item1);
+        calificacion.setCalificacionItem2(item2);
+        calificacion.setCalificacionItem3(item3);
+        calificacion.setCalificacionItem4(item4);
+        calificacion.setCalificacionItem5(item5);
+        calificacion.setComentarios(comentarios);
+        String mensaje=calificacion.calificar(); 
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Calificacion</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>");
+            out.println(mensaje);
+            out.print("</h1>");
+            out.println("</body>");
+            out.println("</html>");
         }
     }
-
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -100,5 +100,4 @@ public class IngresarCalificacionControlador extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
 }

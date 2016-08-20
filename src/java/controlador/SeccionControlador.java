@@ -23,7 +23,11 @@ public class SeccionControlador extends HttpServlet {
 
    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.setContentType("text/html");
+	      processRequest(request, response);
+    }
+   
+   private void processRequest(HttpServletRequest request, HttpServletResponse response){
+       	response.setContentType("text/html");
 		try {
         PrintWriter out = response.getWriter();    
           
@@ -53,5 +57,9 @@ public class SeccionControlador extends HttpServlet {
 	// TODO Auto-generated catch block
             e.printStackTrace();
         }
-    }        		
+   }
+   
+   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+       processRequest(request, response);
+   }
 }
