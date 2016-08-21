@@ -37,15 +37,15 @@
                             <td>
                                 <div class="stars">
                                   <form action="">
-                                    <input class="star star-5" id="A-star-5" type="radio" name="star" onclick="document.getElementById('FormularioCalificacionItem1').value = '5';"/>
+                                    <input class="star star-5" id="A-star-5" type="radio" name="star"/>
                                     <label class="star star-5" for="A-star-5"></label>
-                                    <input class="star star-4" id="A-star-4" type="radio" name="star" onclick="document.getElementById('FormularioCalificacionItem1').value = '4';"/>
+                                    <input class="star star-4" id="A-star-4" type="radio" name="star"/>
                                     <label class="star star-4" for="A-star-4"></label>
-                                    <input class="star star-3" id="A-star-3" type="radio" name="star" onclick="document.getElementById('FormularioCalificacionItem1').value = '3';"/>
+                                    <input class="star star-3" id="A-star-3" type="radio" name="star"/>
                                     <label class="star star-3" for="A-star-3"></label>
-                                    <input class="star star-2" id="A-star-2" type="radio" name="star" onclick="document.getElementById('FormularioCalificacionItem1').value = '2';"/>
+                                    <input class="star star-2" id="A-star-2" type="radio" name="star"/>
                                     <label class="star star-2" for="A-star-2"></label>
-                                    <input class="star star-1" id="A-star-1" type="radio" name="star" onclick="document.getElementById('FormularioCalificacionItem1').value = '1';"/>
+                                    <input class="star star-1" id="A-star-1" type="radio" name="star"/>
                                     <label class="star star-1" for="A-star-1"></label>
                                   </form>
                                 </div>
@@ -56,15 +56,15 @@
                             <td>
                                 <div class="stars">
                                   <form action="">
-                                    <input class="star star-5" id="B-star-5" type="radio" name="star" onclick="document.getElementById('FormularioCalificacionItem2').value = '5';"/>
+                                    <input class="star star-5" id="B-star-5" type="radio" name="star"/>
                                     <label class="star star-5" for="B-star-5"></label>
-                                    <input class="star star-4" id="B-star-4" type="radio" name="star" onclick="document.getElementById('FormularioCalificacionItem2').value = '4';"/>
+                                    <input class="star star-4" id="B-star-4" type="radio" name="star"/>
                                     <label class="star star-4" for="B-star-4"></label>
-                                    <input class="star star-3" id="B-star-3" type="radio" name="star" onclick="document.getElementById('FormularioCalificacionItem2').value = '3';"/>
+                                    <input class="star star-3" id="B-star-3" type="radio" name="star"/>
                                     <label class="star star-3" for="B-star-3"></label>
-                                    <input class="star star-2" id="B-star-2" type="radio" name="star" onclick="document.getElementById('FormularioCalificacionItem2').value = '2';"/>
+                                    <input class="star star-2" id="B-star-2" type="radio" name="star"/>
                                     <label class="star star-2" for="B-star-2"></label>
-                                    <input class="star star-1" id="B-star-1" type="radio" name="star" onclick="document.getElementById('FormularioCalificacionItem2').value = '1';"/>
+                                    <input class="star star-1" id="B-star-1" type="radio" name="star"/>
                                     <label class="star star-1" for="B-star-1"></label>
                                   </form>
                                 </div>
@@ -75,15 +75,15 @@
                             <td>
                                 <div class="stars">
                                   <form action="">
-                                    <input class="star star-5" id="C-star-5" type="radio" name="star" onclick="document.getElementById('FormularioCalificacionItem3').value = '5';"/>
+                                    <input class="star star-5" id="C-star-5" type="radio" name="star"/>
                                     <label class="star star-5" for="C-star-5"></label>
-                                    <input class="star star-4" id="C-star-4" type="radio" name="star" onclick="document.getElementById('FormularioCalificacionItem3').value = '4';"/>
+                                    <input class="star star-4" id="C-star-4" type="radio" name="star"/>
                                     <label class="star star-4" for="C-star-4"></label>
-                                    <input class="star star-3" id="C-star-3" type="radio" name="star" onclick="document.getElementById('FormularioCalificacionItem3').value = '3';"/>
+                                    <input class="star star-3" id="C-star-3" type="radio" name="star"/>
                                     <label class="star star-3" for="C-star-3"></label>
-                                    <input class="star star-2" id="C-star-2" type="radio" name="star" onclick="document.getElementById('FormularioCalificacionItem3').value = '2';"/>
+                                    <input class="star star-2" id="C-star-2" type="radio" name="star"/>
                                     <label class="star star-2" for="C-star-2"></label>
-                                    <input class="star star-1" id="C-star-1" type="radio" name="star" onclick="document.getElementById('FormularioCalificacionItem3').value = '1';"/>
+                                    <input class="star star-1" id="C-star-1" type="radio" name="star"/>
                                     <label class="star star-1" for="C-star-1"></label>
                                   </form>
                                 </div>
@@ -94,15 +94,15 @@
                             <td>
                                 <div class="stars">
                                   <form action="">
-                                    <input class="star star-5" id="D-star-5" type="radio" name="star" onclick="document.getElementById('FormularioCalificacionItem4').value = '5';"/>
+                                    <input class="star star-5" id="D-star-5" type="radio" name="star"/>
                                     <label class="star star-5" for="D-star-5"></label>
-                                    <input class="star star-4" id="D-star-4" type="radio" name="star" onclick="document.getElementById('FormularioCalificacionItem4').value = '4';"/>
+                                    <input class="star star-4" id="D-star-4" type="radio" name="star"/>
                                     <label class="star star-4" for="D-star-4"></label>
-                                    <input class="star star-3" id="D-star-3" type="radio" name="star" onclick="document.getElementById('FormularioCalificacionItem4').value = '3';"/>
+                                    <input class="star star-3" id="D-star-3" type="radio" name="star"/>
                                     <label class="star star-3" for="D-star-3"></label>
-                                    <input class="star star-2" id="D-star-2" type="radio" name="star" onclick="document.getElementById('FormularioCalificacionItem4').value = '2';"/>
+                                    <input class="star star-2" id="D-star-2" type="radio" name="star"/>
                                     <label class="star star-2" for="D-star-2"></label>
-                                    <input class="star star-1" id="D-star-1" type="radio" name="star" onclick="document.getElementById('FormularioCalificacionItem4').value = '1';"/>
+                                    <input class="star star-1" id="D-star-1" type="radio" name="star"/>
                                     <label class="star star-1" for="D-star-1"></label>
                                   </form>
                                 </div>
@@ -113,15 +113,15 @@
                             <td>
                                 <div class="stars">
                                   <form action="">
-                                    <input class="star star-5" id="E-star-5" type="radio" name="star" onclick="document.getElementById('FormularioCalificacionItem5').value = '5';"/>
+                                    <input class="star star-5" id="E-star-5" type="radio" name="star"/>
                                     <label class="star star-5" for="E-star-5"></label>
-                                    <input class="star star-4" id="E-star-4" type="radio" name="star" onclick="document.getElementById('FormularioCalificacionItem5').value = '4';"/>
+                                    <input class="star star-4" id="E-star-4" type="radio" name="star"/>
                                     <label class="star star-4" for="E-star-4"></label>
-                                    <input class="star star-3" id="E-star-3" type="radio" name="star" onclick="document.getElementById('FormularioCalificacionItem5').value = '3';"/>
+                                    <input class="star star-3" id="E-star-3" type="radio" name="star"/>
                                     <label class="star star-3" for="E-star-3"></label>
-                                    <input class="star star-2" id="E-star-2" type="radio" name="star" onclick="document.getElementById('FormularioCalificacionItem5').value = '2';"/>
+                                    <input class="star star-2" id="E-star-2" type="radio" name="star"/>
                                     <label class="star star-2" for="E-star-2"></label>
-                                    <input class="star star-1" id="E-star-1" type="radio" name="star" onclick="document.getElementById('FormularioCalificacionItem5').value = '1';"/>
+                                    <input class="star star-1" id="E-star-1" type="radio" name="star"/>
                                     <label class="star star-1" for="E-star-1"></label>
                                   </form>
                                 </div>
@@ -132,20 +132,12 @@
                         </tr>
                         <tr>
                             <th colspan="2">
-                                <textarea onchange="document.getElementById('FormularioCalificacionComentarios').value = this.value;"></textarea>
+                                <textarea>Comentarios...</textarea>
                             </th>
                         </tr>
                         <tr>
                             <td colspan="2">
-                                 <form action="/Semestre2_2016_Small_Programmers/IngresarCalificacionControlador" id="FormularioCalificacion">
-                                     <input type="Submit" value="Enviar calificación y comentarios">
-                                     <input type="number" name="Item1" id="FormularioCalificacionItem1" style="display:none; height: 0px"><br>
-                                    <input type="number" name="Item2" id="FormularioCalificacionItem2" style="display:none; height: 0px"><br>
-                                    <input type="number" name="Item3" id="FormularioCalificacionItem3" style="display:none; height: 0px"><br>
-                                    <input type="number" name="Item4" id="FormularioCalificacionItem4" style="display:none; height: 0px"><br>
-                                    <input type="number" name="Item5" id="FormularioCalificacionItem5" style="display:none; height: 0px"><br>
-                                    <input type="text" name="Comentarios" id="FormularioCalificacionComentarios" style="display:none; height: 0px"><br> 
-                                 </form>
+                                <input type="Submit" value="Enviar calificación y comentarios">
                             </th>
                         </tr>
                     </table>

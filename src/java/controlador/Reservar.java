@@ -33,7 +33,7 @@ public class Reservar extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+        request.getRequestDispatcher("pago.jsp").forward(request, response);
     }
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -65,8 +65,9 @@ public class Reservar extends HttpServlet {
                 String codigo=request.getParameter("codigo");
                 int camas=Integer.parseInt(request.getParameter("camas"));
                 String fechaEntrada=request.getParameter("fechaEntrada");
-                String fechaSalida=request.getParameter("fechaSalida");
-                Reserva usr=new  Reserva(codigo, camas, fechaEntrada, fechaSalida);
+                String fechaSalida=request.getParameter("fechasalidad");
+                String tipo=request.getParameter("tipo");
+                Reserva usr=new  Reserva(codigo, camas, fechaEntrada, fechaSalida,tipo);
                 ReservarRepositorio reserva=new ReservarRepositorio();
         try {
             reserva.agregar(usr);

@@ -80,6 +80,7 @@ public class Conexion {
                 "  camas varchar(45) DEFAULT NULL," +
                 "  fechaEntrada varchar(45) DEFAULT NULL," +
                 "  fechaSalida varchar(45) DEFAULT NULL," +
+                "  tipo varchar(45) DEFAULT NULL," +
                 "  PRIMARY KEY (idreservas)" +
                 ");";
             
@@ -93,24 +94,6 @@ public class Conexion {
                 "  telefono varchar(45) DEFAULT NULL," +
                 "  PRIMARY KEY (idadministrador)" +
                 ");";
-            String sqldatacredito=  "CREATE TABLE IF NOT EXISTS datacredito (" +
-                "  iddatacredito int NOT NULL," +
-                "  nombre varchar(45) DEFAULT NULL," +
-                "  PRIMARY KEY (iddatacredito)" +
-                ");";
-            
-            //Crea la tabla de calificaciones
-            String sqlCalificaciones=  "CREATE TABLE IF NOT EXISTS calificaciones (" +
-                "  id_calificacion int NOT NULL AUTO_INCREMENT," +
-                "  id_usuario int," +
-                "  calificacionItem1 int DEFAULT NULL," +
-                "  calificacionItem2 int DEFAULT NULL," +
-                "  calificacionItem3 int DEFAULT NULL," +
-                "  calificacionItem4 int DEFAULT NULL," +
-                "  calificacionItem5 int DEFAULT NULL," +
-                "  comentarios varchar(90) DEFAULT NULL," +
-                "  PRIMARY KEY (id_calificacion)" +
-                ");";
 
             
             st=con.createStatement();
@@ -119,8 +102,6 @@ public class Conexion {
             st.executeUpdate(sqlUsuarios);
             st.executeUpdate(sqlReservas);
             st.executeUpdate(sqlAdministrador);
-            st.executeUpdate(sqldatacredito);
-            st.executeUpdate(sqlCalificaciones);
 
         }
         catch(Exception e)
