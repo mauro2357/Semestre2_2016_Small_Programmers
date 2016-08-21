@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package DTO;
+package entidadesdominio;
 
 /**
  *
- * @author edist
+ * @author julianbautista87
  */
 public class Login {
 

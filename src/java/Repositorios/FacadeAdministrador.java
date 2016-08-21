@@ -5,7 +5,7 @@
  */
 package Repositorios;
 
-import DTO.Login;
+import entidadesdominio.Login;
 
 /**
  *

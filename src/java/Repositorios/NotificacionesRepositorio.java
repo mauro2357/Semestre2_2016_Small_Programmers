@@ -5,7 +5,7 @@
  */
 package Repositorios;
 
-import DTO.NotificacionDTO;
+import entidadesdominio.Notificacion;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -17,9 +17,9 @@ import java.util.Collection;
  * @author julianbautista87
  */
 public class NotificacionesRepositorio {
-    public Collection<NotificacionDTO> consultarNotificaciones()throws Exception{
+    public Collection<Notificacion> consultarNotificaciones()throws Exception{
         
-        Collection<NotificacionDTO> notificaciones=new ArrayList<>();
+        Collection<Notificacion> notificaciones=new ArrayList<>();
         
         try {
             Conexion conexion = new Conexion();
@@ -35,7 +35,7 @@ public class NotificacionesRepositorio {
             while (rs.next()) {
                 String fecha = rs.getString("not_fecha");               //OJO! Esta es la columna llamada "not_fecha"
                 String descripcion = rs.getString("not_descripcion");   //OJO! Esta es la columna llamada "not_descripcion"
-                NotificacionDTO notificacionFromDB1 =new NotificacionDTO();
+                Notificacion notificacionFromDB1 =new Notificacion();
                 notificacionFromDB1.setFecha(fecha);                
                 notificacionFromDB1.setDescripcion(descripcion);
                 notificaciones.add(notificacionFromDB1);

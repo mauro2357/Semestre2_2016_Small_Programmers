@@ -5,7 +5,7 @@
  */
 package controlador;
 
-import DTO.Reserva;
+import entidadesdominio.Reserva;
 import Repositorios.ReservarRepositorio;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -62,18 +62,29 @@ public class Reservar extends HttpServlet {
     
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-                String codigo=request.getParameter("codigo");
-                int camas=Integer.parseInt(request.getParameter("camas"));
-                String fechaEntrada=request.getParameter("fechaEntrada");
-                String fechaSalida=request.getParameter("fechasalidad");
-                String tipo=request.getParameter("tipo");
-                Reserva usr=new  Reserva(codigo, camas, fechaEntrada, fechaSalida,tipo);
-                ReservarRepositorio reserva=new ReservarRepositorio();
-        try {
-            reserva.agregar(usr);
-        } catch (Exception ex) {
-            
-        }
+        
+            response.setContentType("text/html;charset=UTF-8");
+            PrintWriter out = response.getWriter();
+
+            String codigo=request.getParameter("codigo");
+            int camas=Integer.parseInt(request.getParameter("camas"));
+            String fechaEntrada=request.getParameter("fechaEntrada");
+            String fechaSalida=request.getParameter("fechaSalida");
+
+            Reserva usr=new  Reserva(codigo, camas, fechaEntrada, fechaSalida);
+            String mensaje = usr.Reservar();
+
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet IngresarNotificacionServlet</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>"+mensaje+"</h1>");
+            out.println("</body>");
+            out.println("</html>");
+        
+
     }
 
     /**

@@ -5,8 +5,7 @@
  */
 package controlador;
 
-import DTO.NotificacionDTO;
-import DTO.ServicioDTO;
+import entidadesdominio.Notificacion;
 import Repositorios.NotificacionesRepositorio;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -35,7 +34,7 @@ public class NotificacionesControlador extends HttpServlet {
             throws ServletException, IOException {
         try{
             NotificacionesRepositorio notificacionRep = new NotificacionesRepositorio();
-            Collection<NotificacionDTO> notificaciones= notificacionRep.consultarNotificaciones();
+            Collection<Notificacion> notificaciones= notificacionRep.consultarNotificaciones();
             request.setAttribute("notificaciones", notificaciones);
             request.getRequestDispatcher("consultaNotificaciones.jsp").forward(request, response);
         }

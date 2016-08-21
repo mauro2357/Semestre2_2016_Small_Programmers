@@ -5,7 +5,6 @@
  */
 package Repositorios;
 
-import DTO.ServicioDTO;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;

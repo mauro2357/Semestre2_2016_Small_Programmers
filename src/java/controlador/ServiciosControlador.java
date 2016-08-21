@@ -5,7 +5,7 @@
  */
 package controlador;
 
-import DTO.ServicioDTO;
+import entidadesdominio.Servicio;
 import Repositorios.ServiciosRepositorio;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -37,7 +37,8 @@ public class ServiciosControlador extends HttpServlet {
             throws ServletException, IOException {
         try{
             ServiciosRepositorio serviciosRep = new ServiciosRepositorio();
-            Collection<ServicioDTO> servicios= serviciosRep.consultarServicios();
+            Collection<Servicio> servicios= serviciosRep.consultarServicios();
+            
             request.setAttribute("servicios", servicios);
             request.getRequestDispatcher("consultaServicios.jsp").forward(request, response);
         }

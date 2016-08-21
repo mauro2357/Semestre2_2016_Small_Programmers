@@ -5,7 +5,7 @@
  */
 package controlador;
 
-import DTO.NotificacionDTO;
+import entidadesdominio.Notificacion;
 import Repositorios.NotificacionesRepositorio;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -43,23 +43,22 @@ public class IngresarNotificacionesControlador extends HttpServlet {
             String fecha = request.getParameter("fechaIngresada");
             String descripcion = request.getParameter("descripcionIngresada");
             
-            NotificacionesRepositorio notificacionRep = new NotificacionesRepositorio();
-            notificacionRep.IngresarNotificacion(fecha, descripcion);
+            Notificacion notificacion = new Notificacion();
+            notificacion.setDescripcion(descripcion);
+            notificacion.setFecha(fecha);
+            String mensaje = notificacion.Notificar();
 
-            
-            /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet IngresarNotificacionServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Ingreso procesado.</h1>");
+            out.println("<h1>"+mensaje+"</h1>");
             out.println("</body>");
             out.println("</html>");
         }
         catch(Exception e){
-            
         }finally {
             out.close();
         }

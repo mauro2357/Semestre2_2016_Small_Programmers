@@ -5,10 +5,6 @@
         <servlet-class>controlador.Registro1</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Reserva</servlet-name>
-        <servlet-class>DTO.Reserva</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>Reservar</servlet-name>
         <servlet-class>controlador.Reservar</servlet-class>
     </servlet>
@@ -59,10 +55,6 @@
     <servlet-mapping>
         <servlet-name>Registro1</servlet-name>
         <url-pattern>/Registro1</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>Reserva</servlet-name>
-        <url-pattern>/Reserva</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Reservar</servlet-name>

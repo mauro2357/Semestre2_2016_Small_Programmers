@@ -3,7 +3,7 @@ package Repositorios;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.SQLException;
-import DTO.Usuario;
+import entidadesdominio.Usuario;
 /**
  *
  * @author Usuario

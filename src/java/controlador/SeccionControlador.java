@@ -5,7 +5,7 @@
  */
 package controlador;
 import Repositorios.FacadeLogin;
-import DTO.Login;
+import entidadesdominio.Login;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;

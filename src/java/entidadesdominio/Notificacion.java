@@ -3,13 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package DTO;
+package entidadesdominio;
+
+import Repositorios.NotificacionesRepositorio;
 
 /**
  *
  * @author julianbautista87
  */
-public class NotificacionDTO {
+public class Notificacion {
     private String fecha;
     private String descripcion;
 
@@ -27,5 +29,17 @@ public class NotificacionDTO {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+    
+    public String Notificar()
+    {
+        try{
+            NotificacionesRepositorio notificacionRep = new NotificacionesRepositorio();
+            notificacionRep.IngresarNotificacion(fecha, descripcion);
+            return "Ingreso procesado";
+        }
+        catch (Exception e){
+            return "Ingreso no procesado";
+        }
     }
 }

@@ -5,7 +5,7 @@
  */
 package Repositorios;
 
-import DTO.*;
+import entidadesdominio.Servicio;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -20,9 +20,9 @@ import java.util.logging.Logger;
  * @author julianbautista87
  */
 public class ServiciosRepositorio {
-    public Collection<ServicioDTO> consultarServicios()throws Exception{
+    public Collection<Servicio> consultarServicios()throws Exception{
         
-        Collection<ServicioDTO> servicios=new ArrayList<>();
+        Collection<Servicio> servicios=new ArrayList<>();
         
         try {
             Conexion conexion = new Conexion();
@@ -38,7 +38,7 @@ public class ServiciosRepositorio {
             while (rs.next()) {
                 String nombre = rs.getString("ser_nombre");                 //OJO! Esta es la columna llamada "ser_nombre"
                 String descripcion = rs.getString("ser_descripcion");       //OJO! Esta es la columna llamada "ser_descripcion"
-                ServicioDTO servicioFromDB1 =new ServicioDTO();
+                Servicio servicioFromDB1 =new Servicio();
                 servicioFromDB1.setNombre(nombre);                
                 servicioFromDB1.setDescripcion(descripcion);
                 servicios.add(servicioFromDB1);

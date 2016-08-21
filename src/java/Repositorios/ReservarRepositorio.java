@@ -3,14 +3,14 @@ package Repositorios;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.SQLException;
-import DTO.Reserva;
+import entidadesdominio.Reserva;
 /**
  *
  * @author Usuario
  */
 
 public class ReservarRepositorio {
-    public void agregar(Reserva rev)throws Exception{
+    public String agregar(Reserva rev)throws Exception{
         Conexion conexion = new Conexion();
         Connection con = conexion.ObtenerConexion();
         Statement st;
@@ -20,10 +20,10 @@ public class ReservarRepositorio {
             st.executeUpdate(sql);
             con.close();
             st.close();
-            System.out.println("datos cargados correctamente");
+            return "Se agregó la reserva correctamente";
         }
         catch(SQLException e){
-            throw new RuntimeException(e);
+            return "No se pudo agregar la reserva. Vuelva a intentarlo.";
         }  
     }
 }

@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package DTO;
+package entidadesdominio;
 
 /**
  *
  * @author julianbautista87
  */
-public class ServicioDTO {
+public class Servicio {
     private String nombre;
     private String descripcion;
 
