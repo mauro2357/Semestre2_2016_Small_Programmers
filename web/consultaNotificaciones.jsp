@@ -1,10 +1,10 @@
 
-<%@page import="DTO.NotificacionDTO"%>
+<%@page import="entidadesdominio.Notificacion"%>
 
 
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Collection"%>
-<%@page import="DTO.ServicioDTO"%>
+<%@page import="entidadesdominio.Servicio"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -28,8 +28,8 @@
                         </tr>
                     <%
                         Object objServicios=request.getAttribute("notificaciones");
-                        Collection<NotificacionDTO> notificaciones=(ArrayList<NotificacionDTO>)objServicios;
-                        for(NotificacionDTO notificacion:notificaciones){  %>              
+                        Collection<Notificacion> notificaciones=(ArrayList<Notificacion>)objServicios;
+                        for(Notificacion notificacion:notificaciones){  %>              
                         <tr>
                             <td><%out.println(notificacion.getFecha());%> </td>
                             <td><%out.println(notificacion.getDescripcion());%></td>

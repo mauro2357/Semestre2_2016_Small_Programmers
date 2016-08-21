@@ -94,14 +94,27 @@ public class Conexion {
                 "  telefono varchar(45) DEFAULT NULL," +
                 "  PRIMARY KEY (idadministrador)" +
                 ");";
-
             
+            String sqlCalificaciones=  "CREATE TABLE IF NOT EXISTS calificaciones (" +
+                "  idCalificaciones int AUTO_INCREMENT," +
+                "  id_usuario int," +
+                "  calificacionItem1 int," +
+                "  calificacionItem2 int," +
+                "  calificacionItem3 int," +
+                "  calificacionItem4 int," +
+                "  calificacionItem5 int," +
+                "  comentarios varchar(90) DEFAULT NULL," +
+                "  PRIMARY KEY (idCalificaciones)" +
+                ");";
+    
             st=con.createStatement();
             st.executeUpdate(sqlServicios);
             st.executeUpdate(sqlNotificaciones);
             st.executeUpdate(sqlUsuarios);
             st.executeUpdate(sqlReservas);
             st.executeUpdate(sqlAdministrador);
+            
+            st.executeUpdate(sqlCalificaciones);
 
         }
         catch(Exception e)

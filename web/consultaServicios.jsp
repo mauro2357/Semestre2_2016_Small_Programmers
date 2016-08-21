@@ -1,6 +1,6 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Collection"%>
-<%@page import="DTO.ServicioDTO"%>
+<%@page import="entidadesdominio.Servicio"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
@@ -25,8 +25,8 @@
                         </tr>
                     <%
                         Object objServicios=request.getAttribute("servicios");
-                        Collection<ServicioDTO> servicios=(ArrayList<ServicioDTO>)objServicios;
-                        for(ServicioDTO servicio:servicios){  %>              
+                        Collection<Servicio> servicios=(ArrayList<Servicio>)objServicios;
+                        for(Servicio servicio:servicios){  %>              
                         <tr>
                             <td><%out.println(servicio.getNombre());%> </td>
                             <td><%out.println(servicio.getDescripcion());%></td>
