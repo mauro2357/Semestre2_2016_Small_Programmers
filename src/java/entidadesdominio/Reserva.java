@@ -9,19 +9,21 @@ import Repositorios.ReservarRepositorio;
 
 /**
  *
- * @author julianbautista87
+ * @author JohnConnor
  */
 public class Reserva {
     String codigo;
     int camas;
     String fechaEntrada;
     String fechaSalida;
+    String tipo;
 
-    public Reserva(String codigo, int camas, String fechaEntrada, String fechaSalida) {
+    public Reserva(String codigo, int camas, String fechaEntrada, String fechaSalida,String tipo) {
         this.codigo = codigo;
         this.camas = camas;
         this.fechaEntrada = fechaEntrada;
         this.fechaSalida = fechaSalida;
+        this.tipo=tipo;
     }
 
     public String getCodigo() {
@@ -54,6 +56,10 @@ public class Reserva {
 
     public void setFechaSalida(String fechaSalida) {
         this.fechaSalida = fechaSalida;
+    }
+    
+    public String gettipo() {
+        return tipo;
     }
     
     public String Reservar()

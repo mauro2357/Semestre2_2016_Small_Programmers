@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import entidadesdominio.Reserva;
 /**
  *
- * @author Usuario
+ * @author Usuario John Connor
  */
 
 public class ReservarRepositorio {
@@ -14,7 +14,7 @@ public class ReservarRepositorio {
         Conexion conexion = new Conexion();
         Connection con = conexion.ObtenerConexion();
         Statement st;
-        String sql = "INSERT INTO reservas values ( null,"+rev.getCodigo()+",'"+rev.getCamas()+"','"+rev.getFechaEntrada()+"','"+rev.getFechaSalida()+"','"+"')";
+        String sql = "INSERT INTO reservas values ( null,"+rev.getCodigo()+",'"+rev.getCamas()+"','"+rev.getFechaEntrada()+"','"+rev.getFechaSalida()+"','"+rev.gettipo()+"')";
         try{
             st=con.createStatement();
             st.executeUpdate(sql);

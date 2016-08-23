@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Usuario
+ * @author Usuario JohnConnor
  */
 public class Reservar extends HttpServlet {
 
@@ -70,8 +70,9 @@ public class Reservar extends HttpServlet {
             int camas=Integer.parseInt(request.getParameter("camas"));
             String fechaEntrada=request.getParameter("fechaEntrada");
             String fechaSalida=request.getParameter("fechaSalida");
+            String tipo=request.getParameter("tipo");
 
-            Reserva usr=new  Reserva(codigo, camas, fechaEntrada, fechaSalida);
+            Reserva usr=new  Reserva(codigo, camas, fechaEntrada, fechaSalida, tipo);
             String mensaje = usr.Reservar();
 
             out.println("<!DOCTYPE html>");
