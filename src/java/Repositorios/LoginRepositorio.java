@@ -10,14 +10,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 /**
  *
  * @author edist
  */
 public class LoginRepositorio {
-    
-    
+        
 public static boolean validate(Login nusuario) throws Exception{          
         boolean status = false;  
 		Connection con = new Conexion().ObtenerConexion();	

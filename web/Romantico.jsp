@@ -22,7 +22,7 @@
                 <form id="ru-formulario" action="Reservar" method="post">
                     <table width="100%" border="0">
                         <tr>
-                            <td>Numero de reserva:</td>
+                            <td>Identificación:</td>
                             <td></td>
                             <td><input type="text" name="codigo" id="codigo" required placeholder="Nro de reserva"/></td>
                             <td>Nro de camas</td>
