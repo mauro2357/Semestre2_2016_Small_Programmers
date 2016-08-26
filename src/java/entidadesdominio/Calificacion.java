@@ -94,5 +94,14 @@ public class Calificacion {
             return "Muchas gracias por sus comentarios";
         }
     }
+    
+    public float ObtenerCalificacionPromedio()
+    {
+        float promedio = 0; 
+        
+        
+        
+        return promedio;
+    }
 }
 

@@ -5,6 +5,7 @@
  */
 package Repositorios;
 
+import entidadesdominio.Notificacion;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -17,6 +18,14 @@ import java.util.Collection;
  * @author julianbautista87
  */
 public class CalificacionRepositorio {
+    
+    public float promedioItem1;
+    public float promedioItem2;
+    public float promedioItem3;
+    public float promedioItem4;
+    public float promedioItem5;
+    public float promedioTotal;
+    
     public void IngresarCalificacion(int id_usuario, int item1, int item2, int item3, int item4, int item5, String comentarios)throws Exception{
         
         Conexion conexion = new Conexion();
@@ -37,4 +46,68 @@ public class CalificacionRepositorio {
         
         
     }
+    
+    public void ObtenerPromedios(){
+        try {
+            Conexion conexion = new Conexion();
+            Connection con = conexion.ObtenerConexion();
+            Statement st;
+            ResultSet rs;
+
+            String sql=("SELECT AVG(calificacionItem1) AS promedioItem1 FROM calificaciones;");               //OJO mira la consulta
+
+            st=con.createStatement();
+            rs=st.executeQuery(sql);
+
+            while (rs.next()) {
+                promedioItem1 = rs.getFloat("promedioItem1");
+            }
+            
+            sql=("SELECT AVG(calificacionItem2) AS promedioItem2 FROM calificaciones;");               //OJO mira la consulta
+
+            st=con.createStatement();
+            rs=st.executeQuery(sql);
+
+            while (rs.next()) {
+                promedioItem2 = rs.getFloat("promedioItem2");
+            }
+            
+            sql=("SELECT AVG(calificacionItem3) AS promedioItem3 FROM calificaciones;");               //OJO mira la consulta
+
+            st=con.createStatement();
+            rs=st.executeQuery(sql);
+
+            while (rs.next()) {
+                promedioItem3 = rs.getFloat("promedioItem3");
+            }
+            
+            sql=("SELECT AVG(calificacionItem4) AS promedioItem4 FROM calificaciones;");               //OJO mira la consulta
+
+            st=con.createStatement();
+            rs=st.executeQuery(sql);
+
+            while (rs.next()) {
+                promedioItem4 = rs.getFloat("promedioItem4");
+            }
+            
+            sql=("SELECT AVG(calificacionItem5) AS promedioItem5 FROM calificaciones;");               //OJO mira la consulta
+
+            st=con.createStatement();
+            rs=st.executeQuery(sql);
+
+            while (rs.next()) {
+                promedioItem5 = rs.getFloat("promedioItem5");
+            }
+            
+            promedioTotal = (promedioItem1 + promedioItem2 + promedioItem3 + promedioItem4 + promedioItem5)/5;
+            
+            con.close();
+            rs.close();
+            st.close();
+
+        } catch (Exception ex) {
+                System.out.print(ex.toString());
+        }
+    }
+    
 }
