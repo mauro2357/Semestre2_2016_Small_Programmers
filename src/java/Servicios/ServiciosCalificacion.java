@@ -5,8 +5,10 @@
  */
 package Servicios;
 
+import Repositorios.CalificacionRepositorio;
 import Repositorios.ServiciosRepositorio;
 import entidadesdominio.Calificacion;
+import javax.jws.WebParam;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.PathParam;
@@ -40,7 +42,12 @@ public class ServiciosCalificacion {
     @GET
     @Produces("text/html")
     public String getXml() throws Exception {
-        return new ServiciosRepositorio().consultarServicios().toString();
+
+        CalificacionRepositorio calificacionRepositorio = new CalificacionRepositorio();
+        calificacionRepositorio.ObtenerPromedios();
+        Float promedio = calificacionRepositorio.getPromedioTotal();
+        return promedio.toString();
+
     }
 
     /**
@@ -50,14 +57,16 @@ public class ServiciosCalificacion {
      */
     @PUT
     @Consumes("application/xml")
-    public void putXml(String calificacionItem1) {
+    public void putXml(String calificacionIn) {
+        
+        int nota = Integer.parseInt(calificacionIn);
         Calificacion calificacion=new Calificacion();
-        calificacion.setCalificacionItem1(5);
-        calificacion.setCalificacionItem2(5);
-        calificacion.setCalificacionItem3(5);
-        calificacion.setCalificacionItem4(5);
-        calificacion.setCalificacionItem5(5);
-        calificacion.setComentarios("Bien");
+        calificacion.setCalificacionItem1(nota);
+        calificacion.setCalificacionItem2(nota);
+        calificacion.setCalificacionItem3(nota);
+        calificacion.setCalificacionItem4(nota);
+        calificacion.setCalificacionItem5(nota);
+        calificacion.setComentarios("Calificacion enviada por servicio web");
         String mensaje=calificacion.calificar(); 
         System.out.println(mensaje);
     }

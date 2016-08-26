@@ -19,12 +19,16 @@ import java.util.Collection;
  */
 public class CalificacionRepositorio {
     
-    public float promedioItem1;
-    public float promedioItem2;
-    public float promedioItem3;
-    public float promedioItem4;
-    public float promedioItem5;
-    public float promedioTotal;
+    float promedioItem1;
+    float promedioItem2;
+    float promedioItem3;
+    float promedioItem4;
+    float promedioItem5;
+    float promedioTotal;
+
+    public float getPromedioTotal() {
+        return promedioTotal;
+    }
     
     public void IngresarCalificacion(int id_usuario, int item1, int item2, int item3, int item4, int item5, String comentarios)throws Exception{
         
