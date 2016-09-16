@@ -18,7 +18,7 @@
                         <tr>
                             <td> 
                                 <div  id="baner"> 
-                                    <p>plan familiar contiene  habitacion con cuatro camas separadas  television ,
+                                    <p>plan familiar contiene  habitacion con cuatro camas separadas  television,
                                     wifi<br> y dos baños
                                     desayuno gratis el primer dia y bono de descuento en el restaurante </p>
                                     <img src="img/familiar.jpg" width="200" height="100"  />
@@ -29,7 +29,7 @@
                             <td> 
                                 <div  id="baner"> 
                                     <p>plan romantico contiene  habitacion decorada para la
-                                    ocasion , television <br>,wifi
+                                    ocasion, television, <br>wifi
                                     cena romantica y botella de vino segun
                                     el gusto del cliente</p>
                                     <img src="img/romantico.jpg" width="200" height="100" alt="Brand" />
@@ -40,7 +40,7 @@
                             <td> 
                                 <div  id="baner"> 
                                     <p>plan economico incluye habitacion sencilla y desayuno gratis el primer dia 
-                                    televicion y telefonia</p>
+                                    television y telefonia</p>
                                     <br>
                                     <img src="img/normal.jpg" width="200" height="100" alt="Brand" />
                                     <br>

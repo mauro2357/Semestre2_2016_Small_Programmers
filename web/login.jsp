@@ -28,7 +28,7 @@
                         </tr>
                         <tr>
                           <td>&nbsp;</td>
-                          <td><input type="submit" name="envia" id="envia" value="Inicio de Sección &gt;"/></td>
+                          <td><input type="submit" name="envia" id="envia" value="Inicio de Sesión"/></td>
                         </tr>
                         <tr>
                           <td>&nbsp;</td>

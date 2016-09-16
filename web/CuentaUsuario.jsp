@@ -72,10 +72,10 @@
                         </form>
                     </div>
                     <div class="producto">
-                        <div class="foto"><img src="img/producto.png" width="150" height="200" alt="producto 01" /></div>
-                        <div class="descripcionA">Reservas</div>
-                        <form action="reservas.jsp">
-                            <input type="submit" value="Reservar habitacion"> 
+                        <div class="foto"><img src="img/Descuentos.png" width="150" height="200" alt="producto 01" /></div>
+                        <div class="descripcionA">Descuentos</div>
+                        <form action="Descuentos.jsp">
+                            <input type="submit" value="Descuentos"> 
                         </form>
                     </div>
                 </div>
