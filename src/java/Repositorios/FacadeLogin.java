@@ -21,11 +21,3 @@ public static String orquestador(Login nadministrador) throws Exception{
             return "NoIngreso";
 	}
 }
-
-
-
-
-    
-
-    
-

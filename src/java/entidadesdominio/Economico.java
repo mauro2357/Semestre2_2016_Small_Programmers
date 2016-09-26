@@ -5,15 +5,13 @@
  */
 package entidadesdominio;
 
-import Repositorios.ReservarRepositorio;
-
 /**
  *
- * @author JohnConnor
+ * @author Usuario
  */
-public class Reserva  extends Planes{
-     int p;
-    public Reserva(String codigo, int camas, String fechaEntrada, String fechaSalida, String tipo) {
+public class Economico  extends Planes{
+
+    public Economico(String codigo, int camas, String fechaEntrada, String fechaSalida, String tipo) {
         super(codigo, camas, fechaEntrada, fechaSalida, tipo);
     }
     
@@ -22,14 +20,14 @@ public class Reserva  extends Planes{
      * @param camas
      * @return
      */
-     @Override
+    @Override
    public boolean ValidarCompra(int camas){
-    if(camas==0){
-    return false;
+    if(0<camas && camas<=2){
+       return true;
     }
-    else{
-        return true;
-    }
+   else{
+       return false;
    }
    }
-
+}
+  

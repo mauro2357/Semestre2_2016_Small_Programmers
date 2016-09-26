@@ -5,8 +5,14 @@
  */
 package controlador;
 
-import entidadesdominio.Reserva;
+
 import Repositorios.ReservarRepositorio;
+import entidadesdominio.Economico;
+import entidadesdominio.Ejecutivo;
+import entidadesdominio.Familiar;
+import entidadesdominio.Planes;
+import entidadesdominio.Reserva;
+import entidadesdominio.Romantico;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
@@ -62,6 +68,7 @@ public class Reservar extends HttpServlet {
     
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+            boolean validar=false;
         
             response.setContentType("text/html;charset=UTF-8");
             PrintWriter out = response.getWriter();
@@ -71,21 +78,47 @@ public class Reservar extends HttpServlet {
             String fechaEntrada=request.getParameter("fechaEntrada");
             String fechaSalida=request.getParameter("fechaSalida");
             String tipo=request.getParameter("tipo");
-
-            Reserva usr=new  Reserva(codigo, camas, fechaEntrada, fechaSalida, tipo);
-            String mensaje = usr.Reservar();
-
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet IngresarNotificacionServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>"+mensaje+"</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        
-
+            Planes usr = null;
+            
+            
+            
+            if("normal".equals(tipo)){
+            usr=new Reserva(codigo, camas, fechaEntrada, fechaSalida, tipo);
+            validar=usr.ValidarCompra(camas);
+           
+            }
+            if("romantico".equals(tipo)){
+            usr=new Romantico(codigo, camas, fechaEntrada, fechaSalida, tipo);
+            validar=usr.ValidarCompra(camas);
+           
+            }
+            
+            if("familiar".equals(tipo)){
+            usr=new Familiar(codigo, camas, fechaEntrada, fechaSalida, tipo);
+            validar=usr.ValidarCompra(camas);
+           
+           
+            }
+            
+            if("ejecutivo".equals(tipo)){
+            usr=new Ejecutivo(codigo, camas, fechaEntrada, fechaSalida, tipo);
+            validar=usr.ValidarCompra(camas);
+           
+            }
+            
+            if("economico".equals(tipo)){
+                usr=new Economico(codigo, camas, fechaEntrada, fechaSalida, tipo);
+                validar=usr.ValidarCompra(camas);
+              
+            }
+            
+              if(validar==true){
+                    usr.Reservar();
+                     out.print("Reserva exitosa del plan "+tipo+"para la fecha "+fechaEntrada);
+                }
+                else{
+                    out.print("error al reservar el plan "+tipo);
+                }    
     }
 
     /**

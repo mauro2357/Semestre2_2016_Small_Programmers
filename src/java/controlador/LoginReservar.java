@@ -41,7 +41,7 @@ public class LoginReservar extends HttpServlet {
                 }
                 else{
 			if(FacadeLogin.orquestador(nusuario).equals("NoIngreso")){    
-			    out.print("<p Style=\"alert\">Usuario y/o Contraseña Invalidos</p>");    
+			    out.print("<script>alert('EL usuario o contraseña es invalido');</script>");    
 			    RequestDispatcher rd=request.getRequestDispatcher("chekout.jsp");    
 			    rd.include(request,response);    
                         }   

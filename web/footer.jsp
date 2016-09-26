@@ -32,8 +32,7 @@
                         <ul class="Menu" >
                             <li><a href="#">Soporte</a></li>
                             <li><a href="#">Información</a></li>
-                            <li><a href="#">Politicas DevoluciÃ³n</a></li>
-                            <li><a href="#">FQA</a></li>
+                            <li><a href="#">Politicas Devolución</a></li>
                             <li><a href="#">Envianos un mail</a></li>
                         </ul>
                     </div>
