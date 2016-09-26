@@ -106,7 +106,7 @@ public class Reservar extends HttpServlet {
            
             }
             
-            if("economico".equals(tipo)){
+            if("Economico".equals(tipo)){
                 usr=new Economico(codigo, camas, fechaEntrada, fechaSalida, tipo);
                 validar=usr.ValidarCompra(camas);
               
