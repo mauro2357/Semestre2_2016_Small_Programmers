@@ -52,6 +52,10 @@
         <servlet-name>IngresarCalificacionControlador</servlet-name>
         <servlet-class>controlador.IngresarCalificacionControlador</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServicioCuartoControlador</servlet-name>
+        <servlet-class>controlador.ServicioCuartoControlador</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Registro1</servlet-name>
         <url-pattern>/Registro1</url-pattern>
@@ -103,6 +107,10 @@
     <servlet-mapping>
         <servlet-name>IngresarCalificacionControlador</servlet-name>
         <url-pattern>/IngresarCalificacionControlador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServicioCuartoControlador</servlet-name>
+        <url-pattern>/ServicioCuartoControlador</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

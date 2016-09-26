@@ -12,6 +12,6 @@ package entidadesdominio;
 public class DescuentoCumpleaños implements command{
     @Override
     public void Descuentos (){
-        int  valor = 20;
+        String  valor = "Descuento cumpleaños ";
 }
 }
