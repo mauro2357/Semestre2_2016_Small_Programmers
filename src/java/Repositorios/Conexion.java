@@ -107,14 +107,24 @@ public class Conexion {
                 "  PRIMARY KEY (idCalificaciones)" +
                 ");";
     
+            //Crea la tabla de Servicios al Cuarto
+            String sqlServiciosCuarto=  "CREATE TABLE IF NOT EXISTS sevicioscuarto (" +
+                "  idusuarios varchar(45) NOT NULL," +
+                "  habitacion int NOT NULL AUTO_INCREMENT," +
+                "  descripcion varchar(400) DEFAULT NULL," +
+                "  estado bool(false) DEFAULT NULL," +
+                "  responder varchar(200) DEFAULT NULL," +
+                "  PRIMARY KEY (idusuarios)" +
+                ");";
+            
             st=con.createStatement();
             st.executeUpdate(sqlServicios);
             st.executeUpdate(sqlNotificaciones);
             st.executeUpdate(sqlUsuarios);
             st.executeUpdate(sqlReservas);
             st.executeUpdate(sqlAdministrador);
-            
             st.executeUpdate(sqlCalificaciones);
+            st.executeUpdate(sqlServiciosCuarto);
 
         }
         catch(Exception e)
