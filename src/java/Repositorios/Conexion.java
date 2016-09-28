@@ -110,7 +110,7 @@ public class Conexion {
             //Crea la tabla de Servicios al Cuarto
             String sqlServiciosCuarto=  "CREATE TABLE IF NOT EXISTS sevicioscuarto (" +
                 "  idusuarios varchar(45) NOT NULL," +
-                "  habitacion int NOT NULL AUTO_INCREMENT," +
+                "  habitacion int NOT NULL," +
                 "  descripcion varchar(400) DEFAULT NULL," +
                 "  estado bool(false) DEFAULT NULL," +
                 "  responder varchar(200) DEFAULT NULL," +
