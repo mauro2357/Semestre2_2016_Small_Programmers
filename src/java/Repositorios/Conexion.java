@@ -108,7 +108,7 @@ public class Conexion {
                 ");";
     
             //Crea la tabla de Servicios al Cuarto
-            String sqlServiciosCuarto=  "CREATE TABLE IF NOT EXISTS sevicioscuarto (" +
+            String sqlCuarto=  "CREATE TABLE IF NOT EXISTS cuartos (" +
                 "  idusuarios varchar(45) NOT NULL," +
                 "  habitacion int NOT NULL," +
                 "  descripcion varchar(400) DEFAULT NULL," +
@@ -124,7 +124,7 @@ public class Conexion {
             st.executeUpdate(sqlReservas);
             st.executeUpdate(sqlAdministrador);
             st.executeUpdate(sqlCalificaciones);
-            st.executeUpdate(sqlServiciosCuarto);
+            st.executeUpdate(sqlCuarto);
 
         }
         catch(Exception e)
