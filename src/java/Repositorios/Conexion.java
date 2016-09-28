@@ -108,7 +108,7 @@ public class Conexion {
                 ");";
     
             //Crea la tabla de Servicios al Cuarto
-            String sqlCuarto=  "CREATE TABLE IF NOT EXISTS cuartos (" +
+            String sqlCuartos=  "CREATE TABLE IF NOT EXISTS cuartos (" +
                 "  idusuarios varchar(45) NOT NULL," +
                 "  habitacion int NOT NULL," +
                 "  descripcion varchar(400) DEFAULT NULL," +
@@ -118,13 +118,14 @@ public class Conexion {
                 ");";
             
             st=con.createStatement();
+            
             st.executeUpdate(sqlServicios);
             st.executeUpdate(sqlNotificaciones);
             st.executeUpdate(sqlUsuarios);
             st.executeUpdate(sqlReservas);
             st.executeUpdate(sqlAdministrador);
             st.executeUpdate(sqlCalificaciones);
-            st.executeUpdate(sqlCuarto);
+            st.executeUpdate(sqlCuartos);
 
         }
         catch(Exception e)
@@ -133,4 +134,3 @@ public class Conexion {
         }
     }
 }
-

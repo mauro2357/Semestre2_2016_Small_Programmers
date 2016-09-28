@@ -21,9 +21,11 @@ public class ServicioCuartoRepositorio {
         String sql = "INSERT INTO cuartos values ("+ S.getId() + ",'" + S.getCuarto() +  "'," + S.getDescripcion() + ",null , null )";
         try {
             st = con.createStatement();
+            System.out.println("nada");
             st.executeUpdate(sql);
             con.close();
             st.close();
+            System.out.println("exitosa");
             return "Somos los mejores";
         } catch (Exception e) {
             return "No se pudo realizar el pedido";
