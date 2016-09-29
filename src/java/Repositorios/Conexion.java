@@ -115,7 +115,7 @@ public class Conexion {
                 "  descripcion varchar(400) DEFAULT NULL," +
                 "  estado int NOT NULL," +
                 "  responder varchar(200) DEFAULT NULL," +
-                "  persona varchar(200) DEFAULT NULL," +    
+                "  persona varchar(20) DEFAULT NULL," +    
                 "  PRIMARY KEY (idcuartos)" +
                 ");";
             

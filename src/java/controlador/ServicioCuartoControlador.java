@@ -71,7 +71,7 @@ public class ServicioCuartoControlador extends HttpServlet {
             String Id = request.getParameter("Id");
             int Cuarto = Integer.parseInt(request.getParameter("Cuarto"));
             String Descripcion = request.getParameter("comentarios");
-            String TipoPersona = request.getParameter("comentarios");
+            String TipoPersona = request.getParameter("TipoPersona");
             ServicioCuarto S = new ServicioCuarto(Id, Descripcion, Cuarto, TipoPersona);
             String mensaje = S.ServicioCuarto();
             
