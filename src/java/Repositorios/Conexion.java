@@ -109,12 +109,13 @@ public class Conexion {
     
             //Crea la tabla de Servicios al Cuarto
             String sqlCuartos=  "CREATE TABLE IF NOT EXISTS cuartos (" +
+                "  idcuartos int NOT NULL AUTO_INCREMENT,"+
                 "  idusuarios varchar(45) NOT NULL," +
                 "  habitacion int NOT NULL," +
                 "  descripcion varchar(400) DEFAULT NULL," +
                 "  estado bool(false) DEFAULT NULL," +
                 "  responder varchar(200) DEFAULT NULL," +
-                "  PRIMARY KEY (idusuarios)" +
+                "  PRIMARY KEY (idcuartos)" +
                 ");";
             
             st=con.createStatement();

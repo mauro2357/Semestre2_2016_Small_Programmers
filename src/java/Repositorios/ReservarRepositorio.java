@@ -22,7 +22,7 @@ public class ReservarRepositorio {
         Connection con = conexion.ObtenerConexion();
         Statement st;
         
-        String sql = "INSERT INTO reservas values ( null,"+rev.getCodigo()+",'"+rev.getCamas()+"','"+rev.getFechaEntrada()+"','"+rev.getFechaSalida()+"','"+rev.gettipo()+"')";
+        String sql = "INSERT INTO reservas values ( null,'"+rev.getCodigo()+"',"+rev.getCamas()+",'"+rev.getFechaEntrada()+"','"+rev.getFechaSalida()+"','"+rev.gettipo()+"')";
         try{
             st=con.createStatement();
             st.executeUpdate(sql);

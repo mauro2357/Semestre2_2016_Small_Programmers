@@ -12,7 +12,9 @@ import Repositorios.ServicioCuartoRepositorio;
  * @author Sebastian
  */
 public class ServicioCuarto {
-    public String id, Descripcion;
+    String id;
+    String Descripcion;
+    int Cuarto;
 
     public ServicioCuarto(String id, String Descripcion, int Cuarto) {
         this.id = id;
@@ -43,7 +45,7 @@ public class ServicioCuarto {
     public void setCuarto(int Cuarto) {
         this.Cuarto = Cuarto;
     }
-    public int Cuarto;
+
     public String ServicioCuarto(){
         ServicioCuartoRepositorio ServicioCuarto = new ServicioCuartoRepositorio();
         try {

@@ -76,7 +76,7 @@ public class Reservar extends HttpServlet {
             String codigo=request.getParameter("codigo");
             int camas=Integer.parseInt(request.getParameter("camas"));
             String fechaEntrada=request.getParameter("fechaEntrada");
-            String fechaSalida=request.getParameter("fechaSalida");
+            String fechaSalida=request.getParameter("fechasalidad");
             String tipo=request.getParameter("tipo");
             Planes usr = null;
             
@@ -120,7 +120,6 @@ public class Reservar extends HttpServlet {
                     out.print("error al reservar el plan "+tipo);
                 }    
     }
-
     /**
      * Returns a short description of the servlet.
      *

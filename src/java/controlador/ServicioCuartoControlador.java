@@ -8,6 +8,7 @@ package controlador;
 import entidadesdominio.ServicioCuarto;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -69,9 +70,12 @@ public class ServicioCuartoControlador extends HttpServlet {
             
             String Id = request.getParameter("Id");
             int Cuarto = Integer.parseInt(request.getParameter("Cuarto"));
-            String Descripcion = request.getParameter("Descripcion");
+            String Descripcion = request.getParameter("comentarios");
             ServicioCuarto S = new ServicioCuarto(Id, Descripcion, Cuarto);
             String mensaje = S.ServicioCuarto();
+            
+            RequestDispatcher rd=request.getRequestDispatcher("CuentaUsuario.jsp");    
+                rd.forward(request,response);
     }
 
     /**
