@@ -2,21 +2,21 @@
 <html>
     <head>
         <meta charset=UTF-8">
-        <title>Administrador</title>
+        <title>Cuenta Administrador</title>
         <link rel="stylesheet" href="Css/Style.css" type="text/css"/>
     </head>
     <body>
-        <%@include file="headerUsuario.jsp" %>
+        <%@include file="headerAdministrador.jsp" %>
         <section>
             <div class="centro">
                 <form action="/Semestre2_2016_Small_Programmers/IngresarNotificacionesControlador">
                     Fecha:<br>
-                        <input type="text" name="fechaIngresada" />
+                        <input type="date" name="fechaIngresada" />
                         <br>
                     Descripcion:<br>
                         <input type="text" name="descripcionIngresada" />
                         <br><br>
-                        <input type="submit" value="Ingresar nueva notificación (solo administrador)" /> 
+                        <input type="submit" value="Ingresar nueva notificación" /> 
                 </form>
             </div>
         </section>

@@ -2,17 +2,15 @@
 <html>
     <head>
         <meta charset=UTF-8">
-    <head>
-        <meta charset="utf-8">
-        <title>Servicios al cuarto</title>
+        <title>Mantenimiento de habitaciones</title>
         <link rel="stylesheet" type="text/css" href="Css/Style.css" />
         <link rel="stylesheet" type="text/css" href="Css/registro.css" />
     </head>
     <body>
-        <%@include file="headerUsuario.jsp" %>
+        <%@include file="headerAdministrador.jsp" %>
         <section>
             <article>
-                <div id="ru-titulo"><h1>Servicio al cuarto:</h1>
+                <div id="ru-titulo"><h1>Mantenimiento de habitación:</h1>
                 </div>
                 <form action = "ServicioCuartoControlador" method="post">
                     <table>
@@ -26,10 +24,12 @@
                             <td class="rojo">*</td>
                             <td><input type="text" name="Cuarto"></td>
                         </tr>
+                        
                         <tr>
                             <td>dijite su servicio:</td>
                             <td class="rojo">*</td>
-                            <td><textarea name="comentarios" rows="5" cols="20" placeholder="Escribe aquí su solicitud"></textarea></td>
+                            <td><textarea name="comentarios" rows="5" cols="40" placeholder="Escribe aquí su solicitud"></textarea></td>
+                            <td> <input type="text" name="TipoPersona"  value ="Administrador" id="" required placeholder="tipo"OnFocus="this.blur()"/></td>
                         </tr>    
                         <tr>
                             <td colspan="6">&nbsp;</td>
@@ -46,6 +46,6 @@
                 </form>
             </article>
         </section>
-        <%@ include file="footer.jsp" %> 
+        <%@include file="footer.jsp" %>
     </body>
 </html>

@@ -26,7 +26,7 @@ public class SeccionControlador extends HttpServlet {
 	      processRequest(request, response);
     }
    
-   private void processRequest(HttpServletRequest request, HttpServletResponse response){
+    private void processRequest(HttpServletRequest request, HttpServletResponse response){
        	response.setContentType("text/html");
 		try {
         PrintWriter out = response.getWriter();    

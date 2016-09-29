@@ -14,9 +14,8 @@
         <section>
         <!-------- 	CONTENT --------->
             <article>
-                
                 <div id="ru-titulo"><h1>Datos de envio:Economico</h1>
-              </div>
+                </div>
                 <p>Favor de capturar los datos de envio para continuar con su compra:</p>
                 <p>&nbsp;</p>
                 <form id="ru-formulario" action="Reservar" method="post">
@@ -36,9 +35,7 @@
                             <td>Fecha de salida:</td>
                             <td class="rojo">*</td>
                             <td><input type="date" name="fechasalidad"  id="fechaSalida" required placeholder="Fecha Salidad" /></td>
-                            
-                            
-                            
+
                             <td> <input type="text" name="tipo"  value ="Economico" id="" required placeholder="tipo"OnFocus="this.blur()"/></td>
                         </tr>
                         <tr>

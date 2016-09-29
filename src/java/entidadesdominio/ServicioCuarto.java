@@ -15,11 +15,13 @@ public class ServicioCuarto {
     String id;
     String Descripcion;
     int Cuarto;
+    String TipoPersona; 
 
-    public ServicioCuarto(String id, String Descripcion, int Cuarto) {
+    public ServicioCuarto(String id, String Descripcion, int Cuarto, String TipoPersona) {
         this.id = id;
         this.Descripcion = Descripcion;
         this.Cuarto = Cuarto;
+        this.TipoPersona = TipoPersona;
     }
 
     public String getId() {
@@ -44,6 +46,14 @@ public class ServicioCuarto {
 
     public void setCuarto(int Cuarto) {
         this.Cuarto = Cuarto;
+    }
+
+    public String getTipoPersona() {
+        return TipoPersona;
+    }
+
+    public void setTipoPersona(String TipoPersona) {
+        this.TipoPersona = TipoPersona;
     }
 
     public String ServicioCuarto(){

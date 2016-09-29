@@ -113,8 +113,9 @@ public class Conexion {
                 "  idusuarios varchar(45) NOT NULL," +
                 "  habitacion int NOT NULL," +
                 "  descripcion varchar(400) DEFAULT NULL," +
-                "  estado bool(false) DEFAULT NULL," +
+                "  estado int NOT NULL," +
                 "  responder varchar(200) DEFAULT NULL," +
+                "  persona varchar(200) DEFAULT NULL," +    
                 "  PRIMARY KEY (idcuartos)" +
                 ");";
             
