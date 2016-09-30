@@ -5,7 +5,7 @@
  */
 package controlador;
 
-import entidadesdominio.ServicioCuarto;
+import entidadesdominio.VerificacionServicio;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -16,9 +16,9 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author 
+ * @author Usuario
  */
-public class ServicioCuartoControlador extends HttpServlet {
+public class RespuestaServicioAceptadaControlador extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,7 +34,15 @@ public class ServicioCuartoControlador extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-          
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet RespuestaServicioAceptada</title>");
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet RespuestaServicioAceptada at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
         }
     }
 
@@ -64,22 +72,23 @@ public class ServicioCuartoControlador extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            
-            response.setContentType("text/html;charset=UTF-8");
-            PrintWriter out = response.getWriter();
-            
-            String Id = request.getParameter("Id");
-            int Cuarto = Integer.parseInt(request.getParameter("Cuarto"));
-            String Descripcion = request.getParameter("comentarios");
-            String TipoPersona = request.getParameter("TipoPersona");
-            ServicioCuarto S = new ServicioCuarto(Id, Descripcion, Cuarto, TipoPersona);
-            String mensaje = S.ServicioCuarto();
-            
-            out.print("Servicio exitoso.");
-            
-            //RequestDispatcher rd=request.getRequestDispatcher("CuentaUsuario.jsp");    
-            //    rd.forward(request,response);
+
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+
+        String codigo = request.getParameter("id");
+        String descripcion = request.getParameter("comentarios");
+        VerificacionServicio usr = new VerificacionServicio(0,codigo,0,null,"1",descripcion,null);
+        System.out.println(descripcion);
+        String mensaje = usr.VerificacionServicio();
+        //RequestDispatcher rd=request.getRequestDispatcher("/Semestre2_2016_Small_Programmers/ConsultaControlador?");    
+        //rd.forward(request,response);
+       
+        
+        processRequest(request, response);
+           
     }
+
     /**
      * Returns a short description of the servlet.
      *
@@ -89,5 +98,5 @@ public class ServicioCuartoControlador extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-    
+
 }

@@ -26,7 +26,7 @@
                 <div class="producto">
                     <div class="foto"><img src="img/eventos.png" width="150" height="200" alt="producto 01" /></div>
                     <div class="descripcionA">Responder</div>
-                    <form action="Descuentos.jsp">
+                    <form action="/Semestre2_2016_Small_Programmers/ConsultaControlador">
                         <input type="submit" value="Responder servicio"> 
                     </form>
                 </div>

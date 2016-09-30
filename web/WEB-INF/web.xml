@@ -56,6 +56,14 @@
         <servlet-name>ServicioCuartoControlador</servlet-name>
         <servlet-class>controlador.ServicioCuartoControlador</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RespuestaServicioAceptadaControlador</servlet-name>
+        <servlet-class>controlador.RespuestaServicioAceptadaControlador</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultaControlador</servlet-name>
+        <servlet-class>controlador.ConsultaControlador</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Registro1</servlet-name>
         <url-pattern>/Registro1</url-pattern>
@@ -111,6 +119,14 @@
     <servlet-mapping>
         <servlet-name>ServicioCuartoControlador</servlet-name>
         <url-pattern>/ServicioCuartoControlador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RespuestaServicioAceptadaControlador</servlet-name>
+        <url-pattern>/RespuestaServicioAceptadaControlador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultaControlador</servlet-name>
+        <url-pattern>/ConsultaControlador</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
