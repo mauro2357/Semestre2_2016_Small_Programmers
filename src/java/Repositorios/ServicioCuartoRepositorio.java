@@ -11,7 +11,7 @@ import java.sql.Statement;
 
 /**
  *
- * @author Sebastian
+ * @author 
  */
 public class ServicioCuartoRepositorio {
     public String agregar (ServicioCuarto S)throws Exception{

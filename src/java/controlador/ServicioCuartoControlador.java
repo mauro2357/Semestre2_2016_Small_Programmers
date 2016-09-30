@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Sebastian
+ * @author 
  */
 public class ServicioCuartoControlador extends HttpServlet {
 

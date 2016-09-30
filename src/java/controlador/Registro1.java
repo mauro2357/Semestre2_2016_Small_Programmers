@@ -82,8 +82,6 @@ public class Registro1 extends HttpServlet {
             mensaje = usr.Registrar();
         }
         
-
-        //if(){}
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */

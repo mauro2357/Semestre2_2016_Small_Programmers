@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -116,8 +117,9 @@ public class Reservar extends HttpServlet {
             System.out.println(a + "esta es la diferencia");
             usr.Reservar();
             out.print("Reserva exitosa del plan " + tipo + "para la fecha " + fechaEntrada);
+            
         } else {
-            out.print("error al reservar el plan " + tipo);
+            out.print("error al reservar el plan " + tipo +" verifique sus datos");
         }
     }
 
