@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author 
+ * @author
  */
 public class ServicioCuartoControlador extends HttpServlet {
 
@@ -34,7 +34,7 @@ public class ServicioCuartoControlador extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-          
+
         }
     }
 
@@ -64,22 +64,23 @@ public class ServicioCuartoControlador extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            
-            response.setContentType("text/html;charset=UTF-8");
-            PrintWriter out = response.getWriter();
-            
-            String Id = request.getParameter("Id");
-            int Cuarto = Integer.parseInt(request.getParameter("Cuarto"));
-            String Descripcion = request.getParameter("comentarios");
-            String TipoPersona = request.getParameter("TipoPersona");
-            ServicioCuarto S = new ServicioCuarto(Id, Descripcion, Cuarto, TipoPersona);
-            String mensaje = S.ServicioCuarto();
-            
-            out.print("Servicio exitoso.");
-            
-            //RequestDispatcher rd=request.getRequestDispatcher("CuentaUsuario.jsp");    
-            //    rd.forward(request,response);
+
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+
+        String Id = request.getParameter("Id");
+        int Cuarto = Integer.parseInt(request.getParameter("Cuarto"));
+        String Descripcion = request.getParameter("comentarios");
+        String TipoPersona = request.getParameter("TipoPersona");
+        ServicioCuarto S = new ServicioCuarto(Id, Descripcion, Cuarto, TipoPersona);
+        String mensaje = S.ServicioCuarto();
+
+        out.print("Servicio exitoso.");
+
+        //RequestDispatcher rd=request.getRequestDispatcher("CuentaUsuario.jsp");    
+        //    rd.forward(request,response);
     }
+
     /**
      * Returns a short description of the servlet.
      *
@@ -89,5 +90,5 @@ public class ServicioCuartoControlador extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-    
+
 }
