@@ -37,7 +37,7 @@ public class AdministradorControlador extends HttpServlet {
         Login nusuario = new Login(usuario, contraseña);
  		
             if (FacadeAdministrador.orquestador(nusuario).equals("Ingreso")){  
-                RequestDispatcher rd=request.getRequestDispatcher("administrador.jsp");    
+                RequestDispatcher rd=request.getRequestDispatcher("indexAdministrador.jsp");    
                 rd.forward(request,response);
             } 
             else{		

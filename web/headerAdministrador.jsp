@@ -7,13 +7,13 @@
     </head>
     <body>
         <header>
-          <div class="encabezado">
+            <div class="encabezado">
                 <div class="encabezado01">
                     <ul class="menu01" >
                         <li><a href="#">Call Center</a></li>
                         <li><a href="index.jsp">LogOut</a></li>
                         <li><a href="contacto.jsp">Contacto</a></li>
-                        <li><a href="administrador.jsp">Home</a></li>
+                        <li><a href="indexAdministrador.jsp">Home</a></li>
                     </ul>
                 </div>
                 <div class="encabezado02">
@@ -27,11 +27,11 @@
                         <div class="imagen">
                             <div class="numero">0</div>
                             <div class="texto">Finalizar Compra</div>
-                       </div>
+                        </div>
                     </div>
                     <div class="telefonica"></div> 
                 </div>
-            <div class="encabezado03">
+                <div class="encabezado03">
                     <div class="Menu">
                         <ul class="Menu" >
                             <li><a href="#">Grupo #1</a></li>
@@ -44,7 +44,7 @@
                         <div class="texto">Buscar...</div>
                         <div class="Button"><a HREF="#"></a></div>
                     </div>
-              </div>
+                </div>
             </div>
         </header>
     </body>
