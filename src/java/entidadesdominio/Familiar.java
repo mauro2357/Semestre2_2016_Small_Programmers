@@ -11,16 +11,22 @@ package entidadesdominio;
  */
 public class Familiar  extends Planes{
 
-    public Familiar(String codigo, int camas, String fechaEntrada, String fechaSalida, String tipo) {
-        super(codigo, camas, fechaEntrada, fechaSalida, tipo);
+    public Familiar(String codigo, int camas, String fechaEntrada, String fechaSalida, String tipo, int precio) {
+        super(codigo, camas, fechaEntrada, fechaSalida, tipo, precio);
     }
     @Override
-   public boolean ValidarCompra(int camas){
-   if (camas<1 || camas>5||camas==0){
-       return false;
-   }
-   else{
-       return true;
-   }
+    public boolean ValidarCompra(int camas){
+        if (camas<1 || camas>5||camas==0){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    
+    public int precio(String a, String b) {
+       FechaCobro convertir=new FechaCobro();
+       int precio_dia=110000;
+       return convertir.DiferenciaFechas(a,b)*precio_dia;
     }
 }

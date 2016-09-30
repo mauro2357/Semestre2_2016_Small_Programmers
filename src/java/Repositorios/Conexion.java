@@ -81,6 +81,7 @@ public class Conexion {
                 "  fechaEntrada varchar(45) DEFAULT NULL," +
                 "  fechaSalida varchar(45) DEFAULT NULL," +
                 "  tipo varchar(45) DEFAULT NULL," +
+                "  precio int NOT NULL," +
                 "  PRIMARY KEY (idreservas)" +
                 ");";
             

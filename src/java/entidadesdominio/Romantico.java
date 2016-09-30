@@ -11,18 +11,23 @@ package entidadesdominio;
  */
 public class Romantico extends Planes {
     
-    public Romantico(String codigo, int camas, String fechaEntrada, String fechaSalida, String tipo) {
-        super(codigo, camas, fechaEntrada, fechaSalida, tipo);
+    public Romantico(String codigo, int camas, String fechaEntrada, String fechaSalida, String tipo, int precio) {
+        super(codigo, camas, fechaEntrada, fechaSalida, tipo, precio);
     }
     
     @Override
-     public boolean ValidarCompra(int camas){
-    if(camas==1) { 
-    return true;
+    public boolean ValidarCompra(int camas){
+        if(camas==1) { 
+        return true;
+        }
+        else{
+            return false;
+        }
     }
-       else{
-           return false;
-       }
     
-}
+    public int precio(String a, String b) {
+        FechaCobro convertir=new FechaCobro();
+        int precio_dia=120000;
+        return convertir.DiferenciaFechas(a,b)*precio_dia;
+    }
 }
