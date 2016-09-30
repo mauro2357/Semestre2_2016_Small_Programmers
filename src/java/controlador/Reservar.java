@@ -5,7 +5,6 @@
  */
 package controlador;
 
-
 import Repositorios.ReservarRepositorio;
 import entidadesdominio.Economico;
 import entidadesdominio.Ejecutivo;
@@ -41,6 +40,7 @@ public class Reservar extends HttpServlet {
             throws ServletException, IOException {
         request.getRequestDispatcher("pago.jsp").forward(request, response);
     }
+
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -65,65 +65,62 @@ public class Reservar extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     @Override
-    
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            boolean validar=false;
-        
-            response.setContentType("text/html;charset=UTF-8");
-            PrintWriter out = response.getWriter();
+        boolean validar = false;
 
-            String codigo=request.getParameter("codigo");
-            int camas=Integer.parseInt(request.getParameter("camas"));
-            String fechaEntrada=request.getParameter("fechaEntrada");
-            String fechaSalida=request.getParameter("fechasalidad");
-            String tipo=request.getParameter("tipo");
-            int precio=0;
-            Planes usr = null;
-            
-            
-            
-            if("normal".equals(tipo)){
-            usr=new Reserva(codigo, camas, fechaEntrada, fechaSalida, tipo, precio);
-            validar=usr.ValidarCompra(camas);
-           
-            }
-            if("romantico".equals(tipo)){
-            usr=new Romantico(codigo, camas, fechaEntrada, fechaSalida, tipo, precio);
-            validar=usr.ValidarCompra(camas);
-           
-            }
-            
-            if("familiar".equals(tipo)){
-            usr=new Familiar(codigo, camas, fechaEntrada, fechaSalida, tipo, precio);
-            validar=usr.ValidarCompra(camas);
-           
-           
-            }
-            
-            if("ejecutivo".equals(tipo)){
-            usr=new Ejecutivo(codigo, camas, fechaEntrada, fechaSalida, tipo, precio);
-            validar=usr.ValidarCompra(camas);
-           
-            }
-            
-            if("Economico".equals(tipo)){
-                usr=new Economico(codigo, camas, fechaEntrada, fechaSalida, tipo, precio);
-                validar=usr.ValidarCompra(camas);
-              
-            }
-            
-            if(validar==true){
-                int a=usr.precio(fechaEntrada, fechaSalida);
-                usr.setPrecio(a);
-                System.out.println(a+"esta es la diferencia");
-                usr.Reservar();
-                out.print("Reserva exitosa del plan "+tipo+"para la fecha "+fechaEntrada);
-            }
-            else{
-                out.print("error al reservar el plan "+tipo);
-            }     
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+
+        String codigo = request.getParameter("codigo");
+        int camas = Integer.parseInt(request.getParameter("camas"));
+        String fechaEntrada = request.getParameter("fechaEntrada");
+        String fechaSalida = request.getParameter("fechasalidad");
+        String tipo = request.getParameter("tipo");
+        int precio = 0;
+        Planes usr = null;
+
+        if ("normal".equals(tipo)) {
+            usr = new Reserva(codigo, camas, fechaEntrada, fechaSalida, tipo, precio);
+            validar = usr.ValidarCompra(camas);
+
+        }
+        if ("romantico".equals(tipo)) {
+            usr = new Romantico(codigo, camas, fechaEntrada, fechaSalida, tipo, precio);
+            validar = usr.ValidarCompra(camas);
+
+        }
+
+        if ("familiar".equals(tipo)) {
+            usr = new Familiar(codigo, camas, fechaEntrada, fechaSalida, tipo, precio);
+            validar = usr.ValidarCompra(camas);
+
+        }
+
+        if ("ejecutivo".equals(tipo)) {
+            usr = new Ejecutivo(codigo, camas, fechaEntrada, fechaSalida, tipo, precio);
+            validar = usr.ValidarCompra(camas);
+
+        }
+
+        if ("Economico".equals(tipo)) {
+            usr = new Economico(codigo, camas, fechaEntrada, fechaSalida, tipo, precio);
+            validar = usr.ValidarCompra(camas);
+
+        }
+
+        if (validar == true) {
+            int a = usr.precio(fechaEntrada, fechaSalida);
+            usr.setPrecio(a);
+            System.out.println(a + "esta es la diferencia");
+            usr.Reservar();
+            out.print("Reserva exitosa del plan " + tipo + "para la fecha " + fechaEntrada);
+        } else {
+            out.print("error al reservar el plan " + tipo);
+        }
     }
+
     /**
      * Returns a short description of the servlet.
      *

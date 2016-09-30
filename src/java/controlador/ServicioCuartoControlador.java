@@ -75,10 +75,9 @@ public class ServicioCuartoControlador extends HttpServlet {
             ServicioCuarto S = new ServicioCuarto(Id, Descripcion, Cuarto, TipoPersona);
             String mensaje = S.ServicioCuarto();
             
-            RequestDispatcher rd=request.getRequestDispatcher("CuentaUsuario.jsp");    
-                rd.forward(request,response);
+            //RequestDispatcher rd=request.getRequestDispatcher("CuentaUsuario.jsp");    
+            //    rd.forward(request,response);
     }
-
     /**
      * Returns a short description of the servlet.
      *

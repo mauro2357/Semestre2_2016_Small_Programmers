@@ -33,7 +33,7 @@ public class Registro1 extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -62,24 +62,35 @@ public class Registro1 extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-                
-        String nombre=request.getParameter("nombre");
-        String apellido=request.getParameter("apellidoPaterno")+" "+request.getParameter("apellidoMaterno");
-        int telefono=Integer.parseInt(request.getParameter("telefono"));
-        int id=Integer.parseInt(request.getParameter("identificacion"));
-        String correo=request.getParameter("mail");
-        String contraseña=request.getParameter("contrasena");
-        System.out.println(contraseña);
-        Usuario usr=new Usuario(nombre, apellido, telefono, id,correo,contraseña);
-        String mensaje=usr.Registrar(); 
+
+        String nombre = request.getParameter("nombre");
+        String apellido = request.getParameter("apellidoPaterno") + " " + request.getParameter("apellidoMaterno");
+        String telefono = request.getParameter("telefono");
+        String id = request.getParameter("identificacion");
+        String correo = request.getParameter("mail");
+        String contraseña = request.getParameter("contrasena");
+        String tipoPersona = request.getParameter("tipoPersona");
+        System.out.println(tipoPersona);
+        String mensaje;
+
+        Usuario usr = new Usuario(nombre, apellido, telefono, id, correo, contraseña, tipoPersona);
         
+        if ("Administrador".equals(tipoPersona)) {
+            mensaje = usr.RegistrarAdministrador();
+        }
+        else{
+            mensaje = usr.Registrar();
+        }
+        
+
+        //if(){}
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Registro</title>");            
+            out.println("<title>Registro</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>");
@@ -88,8 +99,6 @@ public class Registro1 extends HttpServlet {
             out.println("</body>");
             out.println("</html>");
         }
-                
-                
     }
 
     /**

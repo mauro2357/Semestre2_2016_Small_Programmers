@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Registro</title>
+        <meta charset=UTF-8">
+        <title>Registrar Personal del hotel</title>
         <link rel="stylesheet" type="text/css" href="Css/Style.css"  />
         <link rel="stylesheet" type="text/css" href="Css/registro.css"  />
-        <!--<script src="js/registro.js" type="text/javascript"></script>-->
     </head>
     <body>
         <%@ include file="header.jsp"%>
@@ -60,7 +59,7 @@
                             <td>Confirma contraseña:</td>
                             <td class="rojo">*</td>
                             <td><input type="password" name="contrasena2" id="contrasena2" required placeholder="Confirme su clave"  min="4" max="24"/></td>
-
+                            <td> <input type="text" name="tipoPersona"  value ="Administrador" id="" required placeholder="tipo"OnFocus="this.blur()"/></td>
                         </tr>
                         <tr>
                             <td colspan="6">&nbsp;</td>
@@ -81,6 +80,6 @@
                 </form>
             </article>
         </section>
-        <%@ include file="footer.jsp" %> 
+        <%@ include file="footer.jsp" %>
     </body>
 </html>
