@@ -7,6 +7,9 @@ package controlador;
 
 import entidadesdominio.Usuario;
 import Repositorios.RegistroRepositorio;
+import entidadesdominio.Administrador;
+import entidadesdominio.User;
+import entidadesdominio.cliente;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
@@ -72,14 +75,15 @@ public class Registro1 extends HttpServlet {
         String tipoPersona = request.getParameter("tipoPersona");
         System.out.println(tipoPersona);
         String mensaje;
-
-        Usuario usr = new Usuario(nombre, apellido, telefono, id, correo, contraseña, tipoPersona);
+        User usr;
         
         if ("Administrador".equals(tipoPersona)) {
-            mensaje = usr.RegistrarAdministrador();
+            usr=new Administrador(nombre, apellido, telefono, id, correo, contraseña, tipoPersona);
+            mensaje = usr.registrar();
         }
         else{
-            mensaje = usr.Registrar();
+            usr=new cliente(nombre, apellido, telefono, id, correo, contraseña, tipoPersona);
+            mensaje = usr.registrar();
         }
         
         response.setContentType("text/html;charset=UTF-8");

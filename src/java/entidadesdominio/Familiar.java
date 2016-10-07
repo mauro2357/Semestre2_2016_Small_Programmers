@@ -23,7 +23,7 @@ public class Familiar  extends Planes{
             return true;
         }
     }
-    
+    @Override
     public int precio(String a, String b) {
        FechaCobro convertir=new FechaCobro();
        int precio_dia=110000;

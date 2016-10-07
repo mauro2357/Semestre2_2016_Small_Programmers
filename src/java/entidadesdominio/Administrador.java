@@ -9,26 +9,12 @@ import Repositorios.RegistroRepositorio;
 
 /**
  *
- * @author julianbautista87
+ * @author Usuario
  */
-public abstract class Usuario {
+public class Administrador extends Usuario implements User{
 
-    String nombre;
-    String apellido;
-    String telefono;
-    String id;
-    String correo;
-    String contraseña;
-    String tipoPersona;
-
-    public Usuario(String nombre, String apellido, String telefono, String id, String correo, String contraseña, String tipoPersona) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.telefono = telefono;
-        this.id = id;
-        this.correo = correo;
-        this.contraseña = contraseña;
-        this.tipoPersona = tipoPersona;
+    public Administrador(String nombre, String apellido, String telefono, String id, String correo, String contraseña, String tipoPersona) {
+        super(nombre, apellido, telefono, id, correo, contraseña, tipoPersona);
     }
 
     public String getNombre() {
@@ -86,5 +72,17 @@ public abstract class Usuario {
 
     public void setTipoPersona(String tipoPersona) {
         this.tipoPersona = tipoPersona;
+    }
+
+    @Override
+    public String registrar() {
+        RegistroRepositorio registro = new RegistroRepositorio();
+        
+        try {
+            registro.agregarAdminastrador(this);
+            return "Registro exitoso del trabajador.";
+        } catch (Exception ex) {
+            return "Registro invalido del trabajador.";
+        }
     }
 }

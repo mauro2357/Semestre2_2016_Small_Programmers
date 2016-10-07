@@ -29,6 +29,7 @@ public class Economico  extends Planes{
         }
     }
     
+    @Override
     public int precio(String a, String b) {
          FechaCobro convertir=new FechaCobro();
          int precio_dia=80000;

@@ -23,7 +23,6 @@ public class ServiciosCalificacion {
 
     @Context
     private UriInfo context;
-
     /**
      * Creates a new instance of ServiciosCalificacion
      */

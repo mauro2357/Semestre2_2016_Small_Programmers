@@ -6,13 +6,13 @@
 package entidadesdominio;
 
 import Repositorios.CalificacionRepositorio;
-import java.io.PrintWriter;
 
 /**
  *
  * @author Sebastian
  */
 public class Calificacion {
+
     private int id_usuario;
     private int calificacionItem1;
     private int calificacionItem2;
@@ -20,8 +20,7 @@ public class Calificacion {
     private int calificacionItem4;
     private int calificacionItem5;
     private String comentarios;
-    
-    
+
     public int getId_usuario() {
         return id_usuario;
     }
@@ -70,8 +69,6 @@ public class Calificacion {
         this.calificacionItem5 = calificacionItem5;
     }
 
-    
-
     public String getComentarios() {
         return comentarios;
     }
@@ -79,29 +76,24 @@ public class Calificacion {
     public void setComentarios(String comentarios) {
         this.comentarios = comentarios;
     }
-    
-    public String calificar(){
-        try{
-        CalificacionRepositorio califRep = new CalificacionRepositorio();
-        califRep.IngresarCalificacion(0, calificacionItem1, calificacionItem2, calificacionItem3, calificacionItem4, calificacionItem5, comentarios);
+
+    public String calificar() {
+        try {
+            CalificacionRepositorio califRep = new CalificacionRepositorio();
+            califRep.IngresarCalificacion(0, calificacionItem1, calificacionItem2, calificacionItem3, calificacionItem4, calificacionItem5, comentarios);
+        } catch (Exception ex) {
         }
-        catch(Exception ex){}
-        
-        if((calificacionItem1+calificacionItem2+calificacionItem3+calificacionItem4+calificacionItem5) < 15)
-        {
-            return "Ofrecemos disculpas por no haber estado a la altura de sus exigencias, un descuento del 20% se cargará a su cuenta";            
-        }else{
+
+        if ((calificacionItem1 + calificacionItem2 + calificacionItem3 + calificacionItem4 + calificacionItem5) < 15) {
+            return "Ofrecemos disculpas por no haber estado a la altura de sus exigencias, un descuento del 20% se cargará a su cuenta";
+        } else {
             return "Muchas gracias por sus comentarios";
         }
     }
-    
-    public float ObtenerCalificacionPromedio()
-    {
-        float promedio = 0; 
-        
-        
-        
+
+    public float ObtenerCalificacionPromedio() {
+        float promedio = 0;
+
         return promedio;
     }
 }
-

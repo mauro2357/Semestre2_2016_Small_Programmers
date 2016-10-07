@@ -26,6 +26,7 @@ public abstract class Planes {
     public Planes(String codigo, int camas, String fechaEntrada, String fechaSalida,String tipo, int precio) {
         this.codigo = codigo;
         this.camas = camas;
+        
         this.fechaEntrada = fechaEntrada;
         this.fechaSalida = fechaSalida;
         this.tipo=tipo;

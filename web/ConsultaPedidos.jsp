@@ -27,7 +27,7 @@
                             <th> Pedido</th>
                             <th> Respuesta</th>
                             <th>___________</th>
-                            <th>___________</th>
+                     
 
                         </tr>
                         <%

@@ -25,6 +25,7 @@ public class Romantico extends Planes {
         }
     }
     
+    @Override
     public int precio(String a, String b) {
         FechaCobro convertir=new FechaCobro();
         int precio_dia=120000;
