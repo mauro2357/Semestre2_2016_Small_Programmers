@@ -10,6 +10,8 @@ import entidadesdominio.VerificacionServicio;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Collection;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -32,28 +34,12 @@ public class ConsultaControlador extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
         try {
             ServicioCuartoRepositorio servicio = new ServicioCuartoRepositorio();
             Collection<VerificacionServicio> consultas = servicio.consultarNotificaciones();
-
             request.setAttribute("consultas", consultas);
             request.getRequestDispatcher("ConsultaPedidos.jsp").forward(request, response);
         } catch (Exception ex) {
-            response.setContentType("text/html;charset=UTF-8");
-            response.setContentType("text/html;charset=UTF-8");
-            try (PrintWriter out = response.getWriter()) {
-                /* TODO output your page here. You may use following sample code. */
-                out.println("<!DOCTYPE html>");
-                out.println("<html>");
-                out.println("<head>");
-                out.println("<title>Servlet ConsultaServicioControlador</title>");
-                out.println("</head>");
-                out.println("<body>");
-                out.println("<h1>Servlet ConsultaServicioControlador at " + request.getContextPath() + "</h1>");
-                out.println("</body>");
-                out.println("</html>");
-            }
         }
     }
 
@@ -69,7 +55,15 @@ public class ConsultaControlador extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        ServicioCuartoRepositorio servicio = new ServicioCuartoRepositorio();
+        Collection<VerificacionServicio> consultas;
+        try {
+            consultas = servicio.consultarNotificaciones();
+            request.setAttribute("consultas", consultas);
+            request.getRequestDispatcher("ConsultaPedidos.jsp").forward(request, response);
+        } catch (Exception ex) {
+
+        }
     }
 
     /**

@@ -81,9 +81,8 @@ public class RespuestaServicioAceptadaControlador extends HttpServlet {
         VerificacionServicio usr = new VerificacionServicio(0, codigo, 0, null, "1", descripcion, null);
         System.out.println(descripcion);
         String mensaje = usr.VerificacionServicio();
-        //RequestDispatcher rd=request.getRequestDispatcher("/Semestre2_2016_Small_Programmers/ConsultaControlador?");    
-        //rd.forward(request,response);
-
+        request.getRequestDispatcher("ConsultaControlador").forward(request, response);
+        
         processRequest(request, response);
 
     }
