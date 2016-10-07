@@ -5,10 +5,12 @@
  */
 package controlador;
 
-import Repositorios.ServiciosRepositorio;
+import Repositorios.CoborDeReservas;
+import entidadesdominio.CobroReserva;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Collection;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,9 +18,9 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author julianbautista87
+ * @author Usuario
  */
-public class CalificacionControlador extends HttpServlet {
+public class CobroReservarControlador extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -31,8 +33,9 @@ public class CalificacionControlador extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getRequestDispatcher("calificacionHotel.jsp").forward(request, response);
+
     }
+
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -45,8 +48,17 @@ public class CalificacionControlador extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        CoborDeReservas servicio = new CoborDeReservas();
+        Collection<CobroReserva> consultas;
+        try {
+            consultas = servicio.consultarNotificaciones("identificacion");
+            request.setAttribute("consultas", consultas);
+            request.getRequestDispatcher("ConsultaPedidos.jsp").forward(request, response);
+        } catch (Exception ex) {
+
+        }
     }
+
     /**
      * Handles the HTTP <code>POST</code> method.
      *
@@ -57,8 +69,18 @@ public class CalificacionControlador extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
+        throws ServletException, IOException {
+        CoborDeReservas servicio = new CoborDeReservas();
+        Collection<CobroReserva> consultas;
+        String Identificacion = request.getParameter("Identificacion");
+        CoborDeReservas cbr = new CoborDeReservas();
+        try {
+            consultas = servicio.consultarNotificaciones("Identificacion");
+            request.setAttribute("consultas", consultas);
+            request.getRequestDispatcher("ConsultaPedidos.jsp").forward(request, response);
+        } catch (Exception ex) {
+            Logger.getLogger(CobroReservarControlador.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     /**
      * Returns a short description of the servlet.
@@ -69,4 +91,5 @@ public class CalificacionControlador extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
 }

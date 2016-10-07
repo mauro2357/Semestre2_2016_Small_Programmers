@@ -64,6 +64,14 @@
         <servlet-name>ConsultaControlador</servlet-name>
         <servlet-class>controlador.ConsultaControlador</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Linkcode</servlet-name>
+        <servlet-class>controlador.Linkcode</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CobroReservarControlador</servlet-name>
+        <servlet-class>controlador.CobroReservarControlador</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Registro1</servlet-name>
         <url-pattern>/Registro1</url-pattern>
@@ -127,6 +135,14 @@
     <servlet-mapping>
         <servlet-name>ConsultaControlador</servlet-name>
         <url-pattern>/ConsultaControlador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Linkcode</servlet-name>
+        <url-pattern>/Linkcode</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CobroReservarControlador</servlet-name>
+        <url-pattern>/CobroReservarControlador</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

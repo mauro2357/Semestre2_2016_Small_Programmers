@@ -74,7 +74,7 @@
                     <div class="producto">
                         <div class="foto"><img src="img/Descuentos.png" width="150" height="200" alt="producto 01" /></div>
                         <div class="descripcionA">Descuentos</div>
-                        <form action="Descuentos.jsp">
+                        <form action="formulario.jsp">
                             <input type="submit" value="Descuentos"> 
                         </form>
                     </div>

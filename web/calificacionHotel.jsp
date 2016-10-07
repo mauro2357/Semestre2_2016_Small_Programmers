@@ -3,13 +3,11 @@
     Created on : 18/08/2016, 12:31:31 AM
     Author     : julianbautista87
 --%>
-
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Collection"%>
 <%@page import="entidadesdominio.Servicio"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="utf-8">
@@ -31,7 +29,6 @@
                             <th>Ítem</th>
                             <th>Calificacion</th>
                         </tr>
-
                         <tr>
                             <td>Le prestaron el servicio de manera cordial.</td>
                             <td>

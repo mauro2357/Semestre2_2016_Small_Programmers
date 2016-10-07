@@ -69,7 +69,6 @@ public class LoginRepositorio {
     public void validarUsuario(String usuario, String clave) {
 
         try {
-
             URL url = new URL("localhost:8080/Semestre2_2016_Linkodev/webresources/servicioAutenticacion?correo=maorca@outlook.com&contrasena=97030809401");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
@@ -79,16 +78,13 @@ public class LoginRepositorio {
                 throw new RuntimeException("Failed : HTTP error code : "
                         + conn.getResponseCode());
             }
-
             BufferedReader br = new BufferedReader(new InputStreamReader(
                     (conn.getInputStream())));
-
             String output;
             System.out.println("Output from Server .... \n");
             while ((output = br.readLine()) != null) {
                 System.out.println(output);
             }
-
             conn.disconnect();
 
         } catch (MalformedURLException e) {
@@ -101,5 +97,4 @@ public class LoginRepositorio {
 
         }
     }
-
 }

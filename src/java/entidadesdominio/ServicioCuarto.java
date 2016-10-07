@@ -9,7 +9,7 @@ import Repositorios.ServicioCuartoRepositorio;
 
 /**
  *
- * @author Sebastian
+ * @author usuario
  */
 public class ServicioCuarto {
     String id;
