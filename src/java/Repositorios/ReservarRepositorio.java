@@ -10,7 +10,6 @@ import entidadesdominio.Reserva;
  * @author Usuario John Connor
  */
 public class ReservarRepositorio {
-
     /**
      *
      * @param rev
@@ -31,7 +30,7 @@ public class ReservarRepositorio {
             return "Se agregó la reserva correctamente";
         }
         catch(SQLException e){
-            return "No se pudo agregar la reserva. Vuelva a intentarlo.";
+            throw new SQLException("No se pudo realizar la reserva");          
         }  
     }
 }

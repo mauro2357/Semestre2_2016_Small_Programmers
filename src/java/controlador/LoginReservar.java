@@ -49,7 +49,7 @@ public class LoginReservar extends HttpServlet {
 		}
 	} 
         catch (Exception e) {
-	// TODO Auto-generated catch block
+	// TODO Auto-generated catch blockt
             e.printStackTrace();
 	}
     }

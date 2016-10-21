@@ -88,14 +88,14 @@ public abstract class Planes {
     }
 
     
-    public String Reservar()
+    public String Reservar()throws Exception
     {
         ReservarRepositorio reserva=new ReservarRepositorio();
         try {
             return reserva.agregar(this);
         } 
         catch (Exception ex) { 
-            return "Error de conexion con la base de datos";
+            throw new Exception(ex.getMessage());
         }
     }
     

@@ -9,7 +9,7 @@ import entidadesdominio.Login;
 
 /**
  *
- * @author edist
+ * @author jhon connor
  */
 public class  FacadeLogin {
      	public static boolean ingresar(Login nusuario)throws Exception{

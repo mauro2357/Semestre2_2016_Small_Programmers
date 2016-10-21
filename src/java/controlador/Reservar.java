@@ -115,11 +115,15 @@ public class Reservar extends HttpServlet {
             int a = usr.precio(fechaEntrada, fechaSalida);
             usr.setPrecio(a);
             System.out.println(a + "esta es la diferencia");
-            usr.Reservar();
-            out.print("Reserva exitosa del plan " + tipo + "para la fecha " + fechaEntrada);
+            try {
+                usr.Reservar();
+            } catch (Exception ex) {
+                Logger.getLogger(Reservar.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            //out.print("Reserva exitosa del plan " + tipo + "para la fecha " + fechaEntrada);
             
         } else {
-            out.print("error al reservar el plan " + tipo +" verifique sus datos");
+            //out.print("error al reservar el plan " + tipo +" verifique sus datos");
         }
     }
 

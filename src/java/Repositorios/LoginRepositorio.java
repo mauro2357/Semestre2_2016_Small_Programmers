@@ -19,7 +19,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author edist
+ * @author jhon connor
  */
 public class LoginRepositorio {
 
