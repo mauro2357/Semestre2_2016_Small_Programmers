@@ -68,7 +68,7 @@ public class Reservar extends HttpServlet {
     @Override
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+        throws ServletException, IOException {
         boolean validar = false;
 
         response.setContentType("text/html;charset=UTF-8");
@@ -85,48 +85,40 @@ public class Reservar extends HttpServlet {
         if ("normal".equals(tipo)) {
             usr = new Reserva(codigo, camas, fechaEntrada, fechaSalida, tipo, precio);
             validar = usr.ValidarCompra(camas);
-
         }
         if ("romantico".equals(tipo)) {
             usr = new Romantico(codigo, camas, fechaEntrada, fechaSalida, tipo, precio);
             validar = usr.ValidarCompra(camas);
-
         }
 
         if ("familiar".equals(tipo)) {
             usr = new Familiar(codigo, camas, fechaEntrada, fechaSalida, tipo, precio);
             validar = usr.ValidarCompra(camas);
-
         }
 
         if ("ejecutivo".equals(tipo)) {
             usr = new Ejecutivo(codigo, camas, fechaEntrada, fechaSalida, tipo, precio);
             validar = usr.ValidarCompra(camas);
-
         }
 
         if ("Economico".equals(tipo)) {
             usr = new Economico(codigo, camas, fechaEntrada, fechaSalida, tipo, precio);
             validar = usr.ValidarCompra(camas);
-
         }
 
-        if (validar == true) {
+      
             int a = usr.precio(fechaEntrada, fechaSalida);
             usr.setPrecio(a);
             System.out.println(a + "esta es la diferencia");
             try {
                 usr.Reservar();
+                request.getRequestDispatcher("CuentaUsuario.jsp").forward(request, response);
             } catch (Exception ex) {
                 Logger.getLogger(Reservar.class.getName()).log(Level.SEVERE, null, ex);
             }
-            //out.print("Reserva exitosa del plan " + tipo + "para la fecha " + fechaEntrada);
-            
-        } else {
+            //out.print("Reserva exitosa del plan " + tipo + "para la fecha " + fechaEntrada);       
             //out.print("error al reservar el plan " + tipo +" verifique sus datos");
         }
-    }
-
     /**
      * Returns a short description of the servlet.
      *
