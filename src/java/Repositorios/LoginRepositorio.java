@@ -7,7 +7,6 @@ package Repositorios;
 
 import entidadesdominio.Login;
 import entidadesdominio.Usuario;
-import entidadesdominio.UsuarioIO;
 import entidadesdominio.cliente;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -39,6 +38,8 @@ public class LoginRepositorio {
             System.out.println(pst);
 
             rs = pst.executeQuery();
+            nusuario.setNombre(rs.getString("nombre"));
+            nusuario.setApellido(rs.getString("apellido"));
             status = rs.next();
             System.out.println(status);
 
@@ -49,27 +50,25 @@ public class LoginRepositorio {
                 try {
                     con.close();
                 } catch (SQLException e) {
-                    e.printStackTrace();
                 }
             }
             if (pst != null) {
                 try {
                     pst.close();
                 } catch (SQLException e) {
-                    e.printStackTrace();
                 }
             }
             if (rs != null) {
                 try {
                     rs.close();
                 } catch (SQLException e) {
-                    e.printStackTrace();
                 }
             }
         }
         return status;
     }
 
+    @SuppressWarnings("CallToPrintStackTrace")
     public void validarUsuario(String usuario, String clave) {
 
         try {
@@ -92,13 +91,9 @@ public class LoginRepositorio {
             conn.disconnect();
 
         } catch (MalformedURLException e) {
-
             e.printStackTrace();
-
         } catch (IOException e) {
-
             e.printStackTrace();
-
         }
     }
 

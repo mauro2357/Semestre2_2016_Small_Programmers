@@ -40,8 +40,11 @@ public class SeccionControlador extends HttpServlet {
         session.setAttribute("name", usuario); 
         
         Login nusuario = new Login(usuario, contraseña);
- 		
+         		
             if (FacadeLogin.orquestador(nusuario).equals("Ingreso")){  
+                
+                request.getSession().setAttribute("usr", nusuario);
+                request.getRequestDispatcher("Login_linkcode.jsp").forward(request, response);
                 RequestDispatcher rd=request.getRequestDispatcher("CuentaUsuario.jsp");    
                 rd.forward(request,response);
             } 
@@ -63,4 +66,8 @@ public class SeccionControlador extends HttpServlet {
    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
        processRequest(request, response);
    }
+
+    private String Login() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
