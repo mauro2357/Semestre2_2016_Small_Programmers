@@ -5,13 +5,15 @@
  */
 package entidadesdominio;
 
+import Repositorios.LoginRepositorio;
 import Repositorios.RegistroRepositorio;
+import java.sql.SQLException;
 
 /**
  *
  * @author julianbautista87
  */
-public abstract class Usuario {
+public class Usuario {
 
     String nombre;
     String apellido;
@@ -21,6 +23,10 @@ public abstract class Usuario {
     String contraseña;
     String tipoPersona;
 
+    public Usuario() {
+    }
+
+    
     public Usuario(String nombre, String apellido, String telefono, String id, String correo, String contraseña, String tipoPersona) {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -29,6 +35,11 @@ public abstract class Usuario {
         this.correo = correo;
         this.contraseña = contraseña;
         this.tipoPersona = tipoPersona;
+    }
+
+    public Usuario(String correo, String contraseña) {
+        this.correo = correo;
+        this.contraseña = contraseña;
     }
 
     public String getNombre() {
@@ -86,5 +97,11 @@ public abstract class Usuario {
 
     public void setTipoPersona(String tipoPersona) {
         this.tipoPersona = tipoPersona;
+    }
+
+    public Usuario iniciarSesion() throws SQLException {
+        LoginRepositorio loginRepositorio= new LoginRepositorio();
+        Usuario usr=loginRepositorio.iniciarSesion(this);
+        return usr;
     }
 }

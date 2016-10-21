@@ -72,6 +72,10 @@
         <servlet-name>CobroReservarControlador</servlet-name>
         <servlet-class>controlador.CobroReservarControlador</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>IngresoVentas</servlet-name>
+        <servlet-class>controlador.IngresoVentas</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Registro1</servlet-name>
         <url-pattern>/Registro1</url-pattern>
@@ -143,6 +147,10 @@
     <servlet-mapping>
         <servlet-name>CobroReservarControlador</servlet-name>
         <url-pattern>/CobroReservarControlador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IngresoVentas</servlet-name>
+        <url-pattern>/IngresoVentas</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

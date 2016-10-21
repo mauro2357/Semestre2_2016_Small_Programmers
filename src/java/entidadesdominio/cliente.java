@@ -21,6 +21,9 @@ public class cliente extends Usuario implements User {
         super(nombre, apellido, telefono, id, correo, contraseña, tipoPersona);
     }
 
+    public cliente() {
+    }
+
     @Override
     public String registrar() {
         RegistroRepositorio registro = new RegistroRepositorio();

@@ -6,6 +6,9 @@
 package Repositorios;
 
 import entidadesdominio.Login;
+import entidadesdominio.Usuario;
+import entidadesdominio.UsuarioIO;
+import entidadesdominio.cliente;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -16,6 +19,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  *
@@ -96,5 +100,21 @@ public class LoginRepositorio {
             e.printStackTrace();
 
         }
+    }
+
+    public Usuario iniciarSesion(Usuario usr) throws SQLException {
+        Connection con = new Conexion().ObtenerConexion();
+        Statement statement = con.createStatement();
+        String query = "select * from usuarios where email='"+usr.getCorreo()+"' and  contrasena='"+usr.getContraseña()+"'";
+        ResultSet res = statement.executeQuery(query);
+        res.next();
+        Usuario usuario = new cliente();
+        usuario.setNombre(res.getString("nombre"));
+        usuario.setApellido(res.getString("apellido"));
+        usuario.setTelefono(res.getString("telefono"));
+        usuario.setId(res.getString("idusuarios"));
+        usuario.setCorreo(res.getString("email"));        
+        return usuario;
+
     }
 }
