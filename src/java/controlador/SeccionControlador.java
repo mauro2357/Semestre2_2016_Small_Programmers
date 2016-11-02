@@ -5,7 +5,9 @@
  */
 package controlador;
 import Repositorios.FacadeLogin;
+import Repositorios.RegistroRepositorio;
 import entidadesdominio.Login;
+import entidadesdominio.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -32,20 +34,21 @@ public class SeccionControlador extends HttpServlet {
 		try {
         PrintWriter out = response.getWriter();    
           
-        String usuario =request.getParameter("email");    
+        String usu_correo =request.getParameter("email");   
+        RegistroRepositorio regRep = new RegistroRepositorio();
+        Usuario usu = new Usuario();
+        usu=regRep.getDatosUsuarioBD(usu_correo);
         String contraseña =request.getParameter("contrasena");        
         
         HttpSession session = request.getSession(false);  
         if(session!=null)  
-        session.setAttribute("name", usuario); 
+        session.setAttribute("name", usu_correo); 
         
-        Login nusuario = new Login(usuario, contraseña);
-         		
-            if (FacadeLogin.orquestador(nusuario).equals("Ingreso")){  
-                
-                request.getSession().setAttribute("usr", nusuario);
-                request.getRequestDispatcher("Login_linkcode.jsp").forward(request, response);
-                RequestDispatcher rd=request.getRequestDispatcher("CuentaUsuario.jsp");    
+        Login nusuario = new Login(usu_correo, contraseña);
+ 		
+            if (FacadeLogin.orquestador(nusuario).equals("Ingreso")){                                 
+                RequestDispatcher rd=request.getRequestDispatcher("CuentaUsuario.jsp");   
+                request.getSession().setAttribute("usuario", usu);
                 rd.forward(request,response);
             } 
             else{		
@@ -66,8 +69,4 @@ public class SeccionControlador extends HttpServlet {
    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
        processRequest(request, response);
    }
-
-    private String Login() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

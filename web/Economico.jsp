@@ -1,8 +1,3 @@
-<%@page import="entidadesdominio.Login"%>
-<%
-    HttpSession sesion = request.getSession();
-    Login usr = (Login) sesion.getAttribute("usr");
-%>
 <!DOCTYPE html>
 <html>
     <head>

@@ -1,3 +1,8 @@
+<%@page import="entidadesdominio.Usuario"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+    Usuario usu = (Usuario)request.getSession().getAttribute("usuario");
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,6 +23,7 @@
                 </div>
                 <div class="encabezado02">
                     <div class="companias">
+                        <h1><%=usu.getNombre()+" "+usu.getApellido()%></h1>
                         <img class="imagen" src="img/compania01.png" width="183" height="30" alt="compania 1" />
                         <img class="imagen" src="img/compania02.png" width="72" height="30" alt="compania 2" />
                         <a class="texto">OFERTAS ESPECIALES</a>

@@ -1,8 +1,3 @@
-<%@page import="entidadesdominio.Login"%>
-<%
-    HttpSession sesion = request.getSession();
-    Login usr = (Login) sesion.getAttribute("usr");
-%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,6 +7,7 @@
         <title>Cuenta de Ususario</title>
     </head>
     <body>
+        
         <%@include file="headerUsuario.jsp" %>
         <section>
             <div class="centro">

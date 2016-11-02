@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.SQLException;
 import entidadesdominio.Usuario;
+import java.sql.ResultSet;
 
 /**
  *
@@ -28,7 +29,7 @@ public class RegistroRepositorio {
         }
     }
     
-      public void agregarAdminastrador(Usuario usr) throws Exception {
+    public void agregarAdminastrador(Usuario usr) throws Exception {
         Conexion conexion = new Conexion();
         Connection con = conexion.ObtenerConexion();
         Statement st;
@@ -47,4 +48,32 @@ public class RegistroRepositorio {
           
         }
     }
+
+    public Usuario getDatosUsuarioBD(String correo)throws SQLException{
+        Usuario usu = new Usuario();
+        Conexion conex = new Conexion();
+        try {
+            Statement estatuto2 = conex.ObtenerConexion().createStatement();
+            ResultSet rs = estatuto2.executeQuery("SELECT * FROM hotel_application.usuarios where email='"+correo+"';");
+            usu.setCorreo(correo);
+            rs.next();
+            String usu_nombre = rs.getString("nombre");
+            String usu_ape = rs.getString("apellido");
+            String usu_contra = rs.getString("contrasena");
+            String usu_id = rs.getString("idusuarios");
+            String usu_telefono = rs.getString("telefono");
+
+            usu.setNombre(usu_nombre);
+            usu.setApellido(usu_ape);
+            usu.setContraseña(usu_contra);
+            usu.setId(usu_id);
+            usu.setTelefono(usu_telefono);
+                       
+            estatuto2.close();
+        } 
+        catch (SQLException e) {
+            throw new SQLException("El usuario con correo "+correo+" no pudo ser encontrado en la base de datos, vuelve a la pagina principal y ingresa los datos correctamente.");
+        }
+        return usu;
+    }     
 }
