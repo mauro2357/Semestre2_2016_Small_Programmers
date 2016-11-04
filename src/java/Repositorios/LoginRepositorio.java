@@ -105,7 +105,7 @@ public class LoginRepositorio {
     public Usuario iniciarSesion(Usuario usr) throws SQLException {
         Connection con = new Conexion().ObtenerConexion();
         Statement statement = con.createStatement();
-        String query = "select * from usuarios where email='"+usr.getCorreo()+"' and  contrasena='"+usr.getContraseña()+"'";
+        String query = "select * from hotel_application.usuarios where email='"+usr.getCorreo()+"' and  contrasena="+usr.getContraseña();
         ResultSet res = statement.executeQuery(query);
         res.next();
         Usuario usuario = new cliente();

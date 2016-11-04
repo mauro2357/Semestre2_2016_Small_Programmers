@@ -7,32 +7,32 @@
         <title>Cuenta de Ususario</title>
     </head>
     <body>
-        
+
         <%@include file="headerUsuario.jsp" %>
         <section>
             <div class="centro">
                 <img id="banner" class="imagen" src="img/mujer.jpg" width="960" height="300" />    
                 <div class="contenido02">
                     <div class="list_carousel">
-                            <ul id="foo0">
-                                <li><div class="Brand"><img src="img/brand01.png" width="60" height="60" alt="Brand" /></div></li>
-                                <li><div class="Brand"><img src="img/brand02.png" width="60" height="60" alt="Brand" /></div></li>
-                                <li><div class="Brand"><img src="img/brand03.png" width="60" height="60" alt="Brand" /></div></li>
-                                <li><div class="Brand"><img src="img/brand04.png" width="60" height="60" alt="Brand" /></div></li>
-                                <li><div class="Brand"><img src="img/brand05.png" width="60" height="60" alt="Brand" /></div></li>
-                                <li><div class="Brand"><img src="img/brand06.png" width="60" height="60" alt="Brand" /></div></li>
-                                <li><div class="Brand"><img src="img/brand07.png" width="60" height="60" alt="Brand" /></div></li>
-                                <li><div class="Brand"><img src="img/brand08.png" width="60" height="60" alt="Brand" /></div></li>
-                                <li><div class="Brand"><img src="img/brand09.png" width="60" height="60" alt="Brand" /></div></li>
-                                <li><div class="Brand"><img src="img/brand10.png" width="60" height="60" alt="Brand" /></div></li>
-                                <li><div class="Brand"><img src="img/brand11.png" width="60" height="60" alt="Brand" /></div></li>
-                                <li><div class="Brand"><img src="img/brand12.png" width="60" height="60" alt="Brand" /></div></li>
-                                <li><div class="Brand"><img src="img/brand13.png" width="60" height="60" alt="Brand" /></div></li>
-                                <li><div class="Brand"><img src="img/brand14.png" width="60" height="60" alt="Brand" /></div></li>
-                                <li><div class="Brand"><img src="img/brand15.png" width="60" height="60" alt="Brand" /></div></li>
-                                <li><div class="Brand"><img src="img/brand16.png" width="60" height="60" alt="Brand" /></div></li>
-                            </ul>
-                            <div class="clearfix"></div>
+                        <ul id="foo0">
+                            <li><div class="Brand"><img src="img/brand01.png" width="60" height="60" alt="Brand" /></div></li>
+                            <li><div class="Brand"><img src="img/brand02.png" width="60" height="60" alt="Brand" /></div></li>
+                            <li><div class="Brand"><img src="img/brand03.png" width="60" height="60" alt="Brand" /></div></li>
+                            <li><div class="Brand"><img src="img/brand04.png" width="60" height="60" alt="Brand" /></div></li>
+                            <li><div class="Brand"><img src="img/brand05.png" width="60" height="60" alt="Brand" /></div></li>
+                            <li><div class="Brand"><img src="img/brand06.png" width="60" height="60" alt="Brand" /></div></li>
+                            <li><div class="Brand"><img src="img/brand07.png" width="60" height="60" alt="Brand" /></div></li>
+                            <li><div class="Brand"><img src="img/brand08.png" width="60" height="60" alt="Brand" /></div></li>
+                            <li><div class="Brand"><img src="img/brand09.png" width="60" height="60" alt="Brand" /></div></li>
+                            <li><div class="Brand"><img src="img/brand10.png" width="60" height="60" alt="Brand" /></div></li>
+                            <li><div class="Brand"><img src="img/brand11.png" width="60" height="60" alt="Brand" /></div></li>
+                            <li><div class="Brand"><img src="img/brand12.png" width="60" height="60" alt="Brand" /></div></li>
+                            <li><div class="Brand"><img src="img/brand13.png" width="60" height="60" alt="Brand" /></div></li>
+                            <li><div class="Brand"><img src="img/brand14.png" width="60" height="60" alt="Brand" /></div></li>
+                            <li><div class="Brand"><img src="img/brand15.png" width="60" height="60" alt="Brand" /></div></li>
+                            <li><div class="Brand"><img src="img/brand16.png" width="60" height="60" alt="Brand" /></div></li>
+                        </ul>
+                        <div class="clearfix"></div>
                     </div>
                 </div>
                 <div class="clearout"></div>

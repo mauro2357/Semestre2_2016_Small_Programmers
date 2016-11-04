@@ -69,12 +69,11 @@ public class IngresoVentas extends HttpServlet {
             usuario=iODAO.iniciarSesion(usuario);
             request.getSession().setAttribute("usr", usuario);
             request.getRequestDispatcher("Login_linkcode.jsp").forward(request, response);
-        } catch (RuntimeException ex) {
-            //request.getSession().setAttribute("msg", ex.getMessage());
-            //request.getRequestDispatcher("error.jsp").forward(request, response);
+        } catch (Exception ex) {
+            request.getSession().setAttribute("msg", ex.getMessage());
+            request.getRequestDispatcher("error.jsp").forward(request, response);
         }
     }
-
     /**
      * Returns a short description of the servlet.
      *

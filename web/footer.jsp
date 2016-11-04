@@ -15,7 +15,7 @@
                             <li><a href="https://www.facebook.com">Facebook</a></li>
                             <li><a href="https://twitter.com/pokevisiongo">Twitter</a></li>
                             <li><a href="https://www.google.com.co">Google</a></li>
-                            <li><a href="Login_linkcode.jsp">LinkCode</a></li>
+                            <li><a href="Login_linkcode.jsp">Linkcodev</a></li>
                         </ul>
                     </div>
                     <div class="columna">

@@ -16,7 +16,7 @@ import javax.ws.rs.QueryParam;
  *
  * @author Sebastian
  */
-@Path("ServiciosCalificacion")
+@Path("servicioautenticacion")
 public class Servicio_autenticacion {
 
     @Context
@@ -32,14 +32,14 @@ public class Servicio_autenticacion {
      * @return an instance of entidadesdominio.Calificacion
      */
     @GET
-    @Produces("text/html")
-    public String getXml(@QueryParam ("datos") String correo,@QueryParam ("constra") String contra) throws Exception {
+    @Produces("application/json")
+    public String getXml(@QueryParam ("datosUsuario") String usr) throws Exception {
         Gson g=new Gson();
-        //Usuario usuario=g.fromJson(usr, Usuario.class);
-        Usuario usuario=new Usuario();
-        usuario.setCorreo(correo);
-        usuario.setContraseña(contra);
-        usuario=usuario.iniciarSesion();
+        Usuario usuario=g.fromJson(usr, Usuario.class);
+        Usuario Usuario=new Usuario();
+        Usuario.setCorreo(usuario.getCorreo());
+        Usuario.setContraseña(usuario.getContraseña());
+        usuario=Usuario.iniciarSesion();
         String UsrAns=g.toJson(usuario);
         return UsrAns;
     }
