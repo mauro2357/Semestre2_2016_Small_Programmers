@@ -35,7 +35,7 @@ public class CalificacionRepositorio {
         Conexion conexion = new Conexion();
         Connection con = conexion.ObtenerConexion();
         Statement st;
-        String sql = String.format("INSERT INTO calificaciones (calificacionItem1,calificacionItem2,calificacionItem3,calificacionItem4,calificacionItem5,comentarios, id_usuario) VALUES (%1$d,%2$d,%3$d,%4$d,%5$d,'%6$s',%7$d);", item1, item2,  item3,  item4,  item5,  comentarios, id_usuario);
+        String sql = String.format("INSERT INTO calificaciones (`idCalificaciones`,`id_usuario`, `calificacionItem1`, `calificacionItem2`, `calificacionItem3`, `calificacionItem4`, `calificacionItem5`, `comentarios`) VALUES (%1$d,%2$d,%3$d,%4$d,%5$d,'%6$s',%7$d);", item1, item2,  item3,  item4,  item5,  comentarios, id_usuario);
         try{
             st=con.createStatement();
             System.out.println("antes");

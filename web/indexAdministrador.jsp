@@ -7,7 +7,7 @@
     </head>
     <body>
         <%@include file="headerAdministrador.jsp" %>
-        <section>
+        <section>            
             <div class="centro">
                 <div class="producto">
                     <div class="foto"><img src="img/reservar.png" width="150" height="200" alt="producto 01" /></div>

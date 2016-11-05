@@ -5,7 +5,10 @@
  */
 package controlador;
 import Repositorios.FacadeAdministrador;
+import Repositorios.RegistroRepositorio;
+import entidadesdominio.Administrador;
 import entidadesdominio.Login;
+import entidadesdominio.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -14,10 +17,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
 /**
  *
- * @author edist
+ * @author jhon
  */
 public class AdministradorControlador extends HttpServlet {
 
@@ -27,22 +29,29 @@ public class AdministradorControlador extends HttpServlet {
 		try {
         PrintWriter out = response.getWriter();    
           
-        String usuario =request.getParameter("email");    
+        String usu_correo =request.getParameter("email");    
+        RegistroRepositorio regRep = new RegistroRepositorio();
+            //Administrador admi = new Administrador();
+        Usuario admi = new Usuario();
+        admi = regRep.getDatosAdministradorBD(usu_correo);
         String contraseña =request.getParameter("contrasena");        
         
         HttpSession session = request.getSession(false);  
         if(session!=null)  
-        session.setAttribute("name", usuario); 
+        session.setAttribute("name", usu_correo); 
         
-        Login nusuario = new Login(usuario, contraseña);
+        Login nusuario = new Login(usu_correo, contraseña);
  		
             if (FacadeAdministrador.orquestador(nusuario).equals("Ingreso")){  
+                request.getSession().setAttribute("admi", admi);
                 RequestDispatcher rd=request.getRequestDispatcher("indexAdministrador.jsp");    
                 rd.forward(request,response);
             } 
             else{		
 		if(FacadeAdministrador.orquestador(nusuario).equals("NoIngreso")){    
-		    out.print("<p style=\"color:red\">Usuario y/o Contraseña Invalidos</p>");    
+		    out.print("<p style=\"color:red\">Usuario y/o Contraseña Invalidos</p>");
+                    
+                    
 		    RequestDispatcher rd=request.getRequestDispatcher("administradorLogin.jsp");    
 		    rd.include(request,response);    
 		}   

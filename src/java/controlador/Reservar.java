@@ -68,7 +68,7 @@ public class Reservar extends HttpServlet {
     @Override
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
+            throws ServletException, IOException {
         boolean validar = false;
 
         response.setContentType("text/html;charset=UTF-8");
@@ -106,19 +106,22 @@ public class Reservar extends HttpServlet {
             validar = usr.ValidarCompra(camas);
         }
 
-      
-            int a = usr.precio(fechaEntrada, fechaSalida);
-            usr.setPrecio(a);
-            System.out.println(a + "esta es la diferencia");
-            try {
-                usr.Reservar();
-                request.getRequestDispatcher("CuentaUsuario.jsp").forward(request, response);
-            } catch (Exception ex) {
-                Logger.getLogger(Reservar.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            //out.print("Reserva exitosa del plan " + tipo + "para la fecha " + fechaEntrada);       
-            //out.print("error al reservar el plan " + tipo +" verifique sus datos");
+        int a = usr.precio(fechaEntrada, fechaSalida);
+        usr.setPrecio(a);
+        System.out.println(a + "esta es la diferencia");
+        try {
+            usr.Reservar();
+            request.getSession().setAttribute("msg", "Reserva exitosa del plan " + tipo + "para la fecha " + fechaEntrada);
+            request.getRequestDispatcher("CuentaUsuario.jsp").forward(request, response);
+        } catch (Exception ex) {
+            Logger.getLogger(Reservar.class.getName()).log(Level.SEVERE, null, ex);
+            request.getSession().setAttribute("msg", "error al reservar el plan " + tipo +" verifique sus datos");
+            request.getRequestDispatcher("error.jsp").forward(request, response);
         }
+        //out.print("Reserva exitosa del plan " + tipo + "para la fecha " + fechaEntrada);       
+        //out.print("error al reservar el plan " + tipo +" verifique sus datos");
+    }
+
     /**
      * Returns a short description of the servlet.
      *

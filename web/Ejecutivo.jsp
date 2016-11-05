@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
         <title>JSP Page</title>
-    </head>
-     <meta charset="utf-8">
+        <meta charset="utf-8">
         <title>Plan Ejecutivo</title>
         <link rel="stylesheet" type="text/css" href="Css/Style.css" />
         <link rel="stylesheet" type="text/css" href="Css/registro.css" />
-    </head>
+    
     <body>
         <%@include file="headerUsuario.jsp" %>
         <section>
-        <!-------- 	CONTENT --------->
+            <!-------- 	CONTENT --------->
             <article>
-                
+
                 <div id="ru-titulo"><h1>Datos de envio:plan Ejecutivo</h1>
-              </div>
+                </div>
                 <p>Favor de capturar los datos de envio para continuar con su compra:</p>
                 <p>&nbsp;</p>
                 <form id="ru-formulario" action="Reservar" method="post">
@@ -24,10 +22,10 @@
                         <tr>
                             <td>Identificación:</td>
                             <td></td>
-                            <td><input type="text" name="codigo" id="codigo" required placeholder="Nro de reserva"/></td>
+                            <td><input type="text" name="codigo" id="codigo" value="<%=usu.getId()%>"  OnFocus="this.blur()"/></td>
                             <td>Nro de camas</td>
                             <td class="rojo">*</td>
-                            <td><input type="text" name="camas"  id="camas" value=1 min="1" max="4" required placeholder="Cantidad de camas"OnFocus="this.blur()"/></td>
+                            <td><input type="text" name="camas"  id="camas" value=1 min="1" max="4" required placeholder="Cantidad de camas" OnFocus="this.blur()"/></td>
                         </tr>
                         <tr>
                             <td>Fecha de entrada:</td>
@@ -36,10 +34,10 @@
                             <td>Fecha de salida:</td>
                             <td class="rojo">*</td>
                             <td><input type="date" name="fechasalidad"  id="fechaSalida" required placeholder="Fecha Salidad" /></td>
-                            
-                            
-                            
-                            <td> <input type="text" name="tipo"  value ="ejecutivo" id="" required placeholder="tipo"OnFocus="this.blur()"/></td>
+
+
+
+                            <td> <input type="text" name="tipo"  value ="ejecutivo" id="" required placeholder="tipo" OnFocus="this.blur()"/></td>
                         </tr>
                         <tr>
                             <td colspan="6">&nbsp;</td>

@@ -16,7 +16,9 @@ public class Conexion {
     Connection co;
     String bd = "hotel_Application";
     String login = "root";
+    //String password = "IDBxqe95270";
     String password = "root";
+    //String url = "jdbc:mysql://mysql19780-smallprogammer.j.facilcloud.com/" + bd;
     String url = "jdbc:mysql://localhost/" + bd;
     static boolean databaseTableCheck = false;
 

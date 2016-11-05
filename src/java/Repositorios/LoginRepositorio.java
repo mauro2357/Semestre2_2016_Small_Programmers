@@ -43,7 +43,7 @@ public class LoginRepositorio {
             System.out.println(status);
 
         } catch (Exception e) {
-            System.out.println(e);
+            System.out.println(e.getMessage());
         } finally {
             if (con != null) {
                 try {

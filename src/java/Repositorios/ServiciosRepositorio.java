@@ -30,14 +30,14 @@ public class ServiciosRepositorio {
             Statement st;
             ResultSet rs;
 
-            String sql=("SELECT ser_nombre, ser_descripcion FROM servicios;");                //OJO mira la consulta
+            String sql=("SELECT ser_nombre, ser_descripcion FROM servicios;");           
 
             st=con.createStatement();
             rs=st.executeQuery(sql);
 
             while (rs.next()) {
-                String nombre = rs.getString("ser_nombre");                 //OJO! Esta es la columna llamada "ser_nombre"
-                String descripcion = rs.getString("ser_descripcion");       //OJO! Esta es la columna llamada "ser_descripcion"
+                String nombre = rs.getString("ser_nombre");                 
+                String descripcion = rs.getString("ser_descripcion");       
                 Servicio servicioFromDB1 =new Servicio();
                 servicioFromDB1.setNombre(nombre);                
                 servicioFromDB1.setDescripcion(descripcion);

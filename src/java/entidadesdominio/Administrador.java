@@ -17,6 +17,10 @@ public class Administrador extends Usuario implements User{
         super(nombre, apellido, telefono, id, correo, contraseña, tipoPersona);
     }
 
+    public Administrador() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     @Override
     public String registrar() {
         RegistroRepositorio registro = new RegistroRepositorio();

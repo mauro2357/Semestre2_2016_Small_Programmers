@@ -10,29 +10,34 @@
         <link href="css/newcss.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link rel="shortcut icon" href="imagenes/logoCasa.png">
+        <link rel="stylesheet" type="text/css" href="Css/Style.css" />
     </head>
     <body>
-        <div id="wrap">
-            <div id="main">
-                <nav class="light-blue lighten-1" role="navigation">
-                    <div class="nav-wrapper container"><a id="logo-container" href="MuestraPublicacionesIndex" class="brand-logo">IOInmuebles</a>                        
-                    </div>
-                </nav>
-                <div class="section no-pad-bot" id="index-banner">
-                    <div class="container">                        
-                        <h1 class="header center error-text">¡Error!</h1>
-                        <div class="row center col s12">
-                            <div class="card-panel teal lighten-2">
-                                <i class="large material-icons">error</i>
-                                <p align=center>
-                                    <%=(String) request.getSession().getAttribute("msg")%>
-                                    <a href="javascript:window.history.go(-1);"> CLIC AQUÍ PARA REINTENTAR.</a>
-                                </p>
+        <%@ include file="header.jsp"%>
+        <section>
+            <div id="wrap">
+                <div id="main">
+                    <nav class="light-blue lighten-1" role="navigation">
+                        <div class="nav-wrapper container"><a id="logo-container" href="MuestraPublicacionesIndex" class="brand-logo">IOInmuebles</a>                        
+                        </div>
+                    </nav>
+                    <div class="section no-pad-bot" id="index-banner">
+                        <div class="container">                        
+                            <h1 class="header center error-text">¡Error!</h1>
+                            <div class="row center col s12">
+                                <div class="card-panel teal lighten-2">
+                                    <i class="large material-icons">error</i>
+                                    <p align=center>
+                                        <%=(String) request.getSession().getAttribute("msg")%>
+                                        <a href="javascript:window.history.go(-1);"> CLIC AQUÍ PARA REINTENTAR.</a>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <%@ include file ="footer.jsp" %> 
     </body>
 </html>

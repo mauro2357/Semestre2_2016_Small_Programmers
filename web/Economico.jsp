@@ -23,7 +23,7 @@
                         <tr>
                             <td>Identificación:</td>
                             <td></td>
-                            <td><input type="text" name="codigo" id="codigo" required placeholder="Nro de reserva"/></td>
+                            <td><input type="text" name="codigo" id="codigo" value="<%=usu.getId()%>"  OnFocus="this.blur()"/></td>
                             <td>Nro de camas</td>
                             <td class="rojo">*</td>
                             <td><input type="text" name="camas"  id="camas" value=1 min="1" max="2" required placeholder="Cantidad de camas"/></td>

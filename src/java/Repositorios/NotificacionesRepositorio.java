@@ -60,7 +60,7 @@ public class NotificacionesRepositorio {
             
             Statement st;
 
-            String sql= "INSERT INTO notificaciones (not_fecha, not_descripcion) VALUES ('" + fecha + "', '" + descripcion + "');" ;                //OJO mira la consulta
+            String sql= "INSERT INTO notificaciones (`not_fecha`, `not_descripcion`) VALUES ('" + fecha + "', '" + descripcion + "');" ;                //OJO mira la consulta
 
             st=con.createStatement();
             st.executeUpdate(sql);

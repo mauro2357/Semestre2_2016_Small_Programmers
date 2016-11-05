@@ -8,50 +8,20 @@
     <head>
         <meta charset=UTF-8">
         <title>encabezado usuario</title>
-        <link rel="stylesheet" href="Css/Style.css" type="text/css"/>
+        <link rel="stylesheet" href="Css/estilos.css">
+        <link rel="stylesheet" href="Css/fonts.css">
     </head>
     <body>
         <header>
-          <div class="encabezado">
-                <div class="encabezado01">
-                    <ul class="menu01" >
-                        <li><a href="#">Call Center</a></li>
-                        <li><a href="index.jsp">LogOut</a></li>
-                        <li><a href="contacto.jsp">Contacto</a></li>
-                        <li><a href="CuentaUsuario.jsp">Home</a></li>
-                    </ul>
-                </div>
-                <div class="encabezado02">
-                    <div class="companias">
-                        <h1><%=usu.getNombre()+" "+usu.getApellido()%></h1>
-                        <img class="imagen" src="img/compania01.png" width="183" height="30" alt="compania 1" />
-                        <img class="imagen" src="img/compania02.png" width="72" height="30" alt="compania 2" />
-                        <a class="texto">OFERTAS ESPECIALES</a>
-                    </div>  
-                    <div class="bolsa">
-                        <div class="titulo">Compras</div>
-                        <div class="imagen">
-                            <div class="numero">0</div>
-                            <div class="texto">Finalizar Compra</div>
-                       </div>
-                    </div>
-                    <div class="telefonica"></div> 
-                </div>
-            <div class="encabezado03">
-                    <div class="Menu">
-                        <ul class="Menu" >
-                            <li><a href="#">Grupo #1</a></li>
-                            <li><a href="#">Grupo #2</a></li>
-                            <li><a href="#">Grupo #3</a></li>
-                            <li><a href="#">Grupo #4</a></li>
-                        </ul>
-                    </div>
-                    <div class="Search">
-                        <div class="texto">Buscar...</div>
-                        <div class="Button"><a HREF="#"></a></div>
-                    </div>
-              </div>
-            </div>
+            <nav>
+                <ul>
+                    <li><a href="CuentaUsuario.jsp"><span class="primero"><i class="icon icon-house"></i></span>Inicio</a></li>
+                    <li><a href="index.jsp"><span class="tercero"><i class="icon icon-suitcase"></i></span>LogOut</a></li>
+                    <li><a href="callCenter.jsp"><span class="cuarto"><i class="icon icon-text"></i></span>Acerca de</a></li>
+                    <li><a href="contacto.jsp"><span class="quinto"><i class="icon icon-mail"></i></span>Contacto</a></li>
+                    <p style="background-color: white"><%=usu.getNombre()+" "+usu.getApellido()%></p>
+                </ul>
+            </nav>
         </header>
     </body>
 </html>

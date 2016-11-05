@@ -64,7 +64,7 @@ public class ServicioCuartoRepositorio {
         Conexion conexion = new Conexion();
         Connection con = conexion.ObtenerConexion();
         Statement st;
-        String sql = "INSERT INTO cuartos values (null ,'"+ S.getId() + "'," + S.getCuarto() +  ",'" + S.getDescripcion() + "',0 , null, '"+S.getTipoPersona()+"' )";
+        String sql = "INSERT INTO cuartos (`idcuartos`, `idusuarios`, `habitacion`, `descripcion`, `estado`, `responder`, `persona`) values (null ,'"+ S.getId() + "'," + S.getCuarto() +  ",'" + S.getDescripcion() + "',0 , null, '"+S.getTipoPersona()+"' )";
         try {
             st = con.createStatement();
             System.out.println("nada");

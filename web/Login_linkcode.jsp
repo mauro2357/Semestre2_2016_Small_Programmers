@@ -9,14 +9,16 @@
     </head>
     <body>
         <%@ include file="header.jsp"%>
-        <h1>Ingresa a Los servicios del Hotel</h1>
-        <form action="IngresoVentas" method="post">
-            <h3>Escribe tu correo</h3>
-            <input name="correo" required="true" type="email">
-            <h3>Escribe tu contraseña</h3>
-            <input name="contrasena" required="true" type="password"><br><br>
-            <button type="submit">Ingresar</button>
-        </form>
+        <section>
+            <h1>Ingresa a Los servicios del Hotel</h1>
+            <form action="IngresoVentas" method="post">
+                <h3>Escribe tu correo</h3>
+                <input name="correo" required="true" type="email">
+                <h3>Escribe tu contraseña</h3>
+                <input name="contrasena" required="true" type="password"><br><br>
+                <button type="submit">Ingresar</button>
+            </form>
+        </section>
         <%@ include file="footer.jsp"%>
     </body>
 </html>

@@ -19,7 +19,7 @@
                         <tr>                            
                             <td>Identificacion:</td>
                             <td class="rojo">*</td>
-                            <td><input type="text" name="Id"></td>
+                            <td><input type="text" name="Id" value="<%=usu.getId()%>"  OnFocus="this.blur()"></td>
                         </tr>
                         <tr>
                             <td>Numero de habitación:</td>
